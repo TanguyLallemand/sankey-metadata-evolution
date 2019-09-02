@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>module.importExportData API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>module.importExportData</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+#
+################################################################################
+#
+#  CoRGI : The Co-Regulated Gene Investigator
+#
+#  Copyright: 2019 INRA http://www.inra.fr
+#
+#  License:
+#    CeCILL: http://www.cecill.info/licences/Licence_CeCILL_V2-en.html
+#    See the LICENCE file in the project&#39;s top-level directory for details.
+#
+#  Author:
+#    * Tanguy LALLEMAND, BIDEFI team, IRHS
+#
+################################################################################
+
+import csv
+import json
+import os
+import re
+
+
+def openJsonFile(filename):
+  &#34;&#34;&#34;Allow to open a Json file and return it loaded in an object.
+
+  Parameters
+  ----------
+  filename : string
+      Path to a Json file.
+
+  Returns
+  -------
+  Json object
+      Return a Json object containning loaded local data
+
+  &#34;&#34;&#34;
+  with open(filename, &#39;r&#39;, encoding=&#39;utf-8&#39;) as json_file:
+    json_data = json.load(json_file)
+  return(json_data)
+
+
+def saveJsonFile(filename, jsonObject):
+  &#34;&#34;&#34;Allow to open a Json file and return it loaded in an object.
+
+  Parameters
+  ----------
+  filename : string
+      Path to a Json file.
+
+  Returns
+  -------
+  Json object
+      Return a Json object containning loaded local data
+
+  &#34;&#34;&#34;
+  #
+  with open(filename, mode=&#39;w+&#39;, encoding=&#39;utf-8&#39;) as outputJson:
+    # Dump Json object in a file, add  indent=2, to not minify json
+    json.dump(jsonObject, outputJson, separators=(&#39;,&#39;, &#39;: &#39;))
+
+
+def parseTSV(filename):
+  &#34;&#34;&#34;Allow to open a CSV file and return it loaded in an array.
+
+  Parameters
+  ----------
+  filename : string
+      Path to a CSV file.
+
+  Returns
+  -------
+  Array
+      Return an array containning all data from a CSV file
+  &#34;&#34;&#34;
+  tsvContent = []
+  with open(filename) as tsvFile:
+    # Parse TSV
+    reader = csv.reader(tsvFile, dialect=&#34;excel-tab&#34;)
+    # Skip header
+    next(reader, None)
+    # Read parsed csv file
+    for line in reader:
+      tsvContent.append(line)
+  return(tsvContent)
+
+
+def constructJson(tsvContent):
+  &#34;&#34;&#34;Allow to construct a Json object from a CSV file and return it loaded in an Json object.
+
+  Parameters
+  ----------
+  tsvContent : array
+      Array containning all data from a CSV
+
+  Returns
+  -------
+  Json object
+      Return a Json object gathering all informations for each Gene ID from TAIR database
+  &#34;&#34;&#34;
+  # Header of TSV file
+  # Locus       Gene Model(s)   GO term (GO ID) cat     code    GO Slim Reference       Made by: date last modified
+  # One exemple
+  # AT5G15930   2146117 AT5G15930       Rab GTPase binding      GO:0017137      8668    func    protein binding IBA     Communication:501741973         08/03/2018 00:00:00
+
+  # Initialize an object to store json in construction
+  jsonObject = {}
+  # Read TSV content
+  for tsvLine in tsvContent:
+    tempObject = {}
+    if tsvLine[0] not in jsonObject:
+      jsonObject[tsvLine[0]] = []
+    # If TAIR found a result for this line save it in a dictionnary, with gene ID as key and different informations as value
+    if len(tsvLine) == 12:
+      # tempObject[&#34;TAIR_accession&#34;] = tsvLine[1]
+      tempObject[&#34;Model&#34;] = tsvLine[2]
+      tempObject[&#34;GO_Term&#34;] = tsvLine[3]
+      tempObject[&#34;GO_ID&#34;] = tsvLine[4]
+      # tempObject[&#34;TAIR_Keyword_ID&#34;] = tsvLine[5]
+      tempObject[&#34;Cat&#34;] = tsvLine[6]
+      tempObject[&#34;GOslim_reference&#34;] = tsvLine[7]
+      tempObject[&#34;Evidence_code&#34;] = tsvLine[8]
+      # tempObject[&#34;Reference&#34;] = tsvLine[9]
+      # tempObject[&#34;Date_last_modified&#34;] = tsvLine[11]
+    else:
+      tempObject = {&#34;Not Found&#34;: &#34;Null&#34;}
+    jsonObject[tsvLine[0]].append(tempObject)
+  return(jsonObject)
+
+
+def recursiveSedInJson(jsonFile, searchedKey):
+  &#34;&#34;&#34;Allow to change particular values from targeted key in recursive fashion.
+
+  Parameters
+  ----------
+  jsonFile : Json object
+      a Json object.
+
+  searchedKey : string
+      a string representing a key of JSON file
+
+  Returns
+  -------
+  Json object
+      Return a modified Json object
+
+  &#34;&#34;&#34;
+  # Check if function can be launch on current iteration
+  if type(jsonFile) is dict and jsonFile:
+    # Iterate through Json
+    for key in jsonFile:
+      # If key is found
+      if key == searchedKey:
+        if key == &#39;pred&#39;:
+          # Resolving some PURL into predicators
+          # https://www.ebi.ac.uk/miriam/main/mdb?section=uris
+          jsonFile[key] = jsonFile[key].replace(
+              &#39;http://purl.obolibrary.org/obo/BFO_0000050&#39;, &#39;part_of&#39;)
+          jsonFile[key] = jsonFile[key].replace(
+              &#39;http://purl.obolibrary.org/obo/RO_0002211&#39;, &#39;regulates&#39;)
+          jsonFile[key] = jsonFile[key].replace(
+              &#39;http://purl.obolibrary.org/obo/BFO_0000066&#39;, &#39;occurs_in&#39;)
+        else:
+          # Remove url and keep only GO ID
+          jsonFile[key] = re.sub(
+              r&#34;(http:\/\/purl\.obolibrary\.org\/obo\/)([A-Z]{2,3})(_)(\d{7})&#34;, &#34;\g&lt;2&gt;:\g&lt;4&gt;&#34;, jsonFile[key])
+      # Recursive launch of functionGO in Json format
+      recursiveSedInJson(jsonFile[key], searchedKey)
+  elif type(jsonFile) is list and jsonFile:
+    for entity in jsonFile:
+      recursiveSedInJson(entity, searchedKey)
+
+  return(jsonFile)
+
+
+def prepareJson(args):
+  &#34;&#34;&#34;Allow to download and parse an ontology file in Json format using some bash commands
+
+  Parameters
+  ----------
+  config : Dictionnary
+      Dictionnary gathering all configuration variables.
+  &#34;&#34;&#34;
+  # Check if file arleady exist, avoiding to re download it
+  if not os.path.isfile(args.GOpath):
+    # Download Json file using given path and url
+    bashCommand = &#34;wget -nc -O &#34; + \
+        args.GOpath + &#34; &#34; + args.url
+    os.system(bashCommand)
+    # Change sub to source, fitting with d3.js requirements
+    bashCommand = &#39;sed -i \&#39;s/\&#34;sub\&#34;/\&#34;source\&#34;/g\&#39; &#39; + \
+        args.GOpath
+    os.system(bashCommand)
+    # Change obj to target, fitting with d3.js requirements
+    bashCommand = &#39;sed -i \&#39;s/\&#34;obj\&#34;/\&#34;target\&#34;/g\&#39; &#39; + \
+        args.GOpath
+    os.system(bashCommand)
+    # Few changes to produce a valid Json
+    bashCommand = &#39;sed -i \&#39;2d\&#39; &#39; + args.GOpath
+    os.system(bashCommand)
+    bashCommand = &#39;sed -i \&#39;$d\&#39; &#39; + args.GOpath
+    os.system(bashCommand)
+    bashCommand = &#39;sed -i \&#39;$d\&#39; &#39; + args.GOpath
+    os.system(bashCommand)
+    bashCommand = &#39;echo \&#39;}\&#39; &gt;&gt; &#39; + args.GOpath
+    os.system(bashCommand)
+
+
+def parseCorgiOutput(path):
+  &#34;&#34;&#34;Allow to parse CoRGI output file and return parsed information of genes and metadata of experimentations throught all iterations of CoRGI experimentations
+
+  Parameters
+  ----------
+  path : string
+      Path of CoRGI output file
+
+  Returns
+  -------
+  [experiments, genes] : array
+      Return an array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations
+  &#34;&#34;&#34;
+  experiments = {&#34;iteration_0&#34;: []}
+  genes = {&#34;iteration_0&#34;: []}
+  iteration = &#34;iteration_0&#34;
+  i = 0
+  with open(path, mode=&#39;r&#39;) as algorithmOutput:
+    for line in algorithmOutput:
+      for lineSplitted in line.split():
+        if lineSplitted == &#34;Itération&#34;:
+          splittedIterationString = iteration.split(&#39;_&#39;)
+          i = line.split()[1]
+          iteration = splittedIterationString[0] + &#34;_&#34; + line.split()[1]
+          # Initialize a new array of object in both array, to store future IDs of experiments or genes
+          experiments[iteration] = []
+          genes[iteration] = []
+        # If current line is a ID of experiment
+        if re.match(&#34;^X&#34;, lineSplitted):
+          # Delete X char, and replace &#39;.&#39; by a &#39;#&#39; to fit with orignals IDs
+          lineSplitted = lineSplitted[1:].replace(&#39;.&#39;, &#39;#&#39;)
+          if i != 0:
+            experiments[iteration].append(lineSplitted)
+        # If current line is a ID of gene
+        if re.match(&#34;^AT&#34;, lineSplitted):
+          if i != 0:
+            genes[iteration].append(lineSplitted)
+  # Return results in an array of array, allowing a more compact return, easy to parse
+  return [experiments, genes]</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="module.importExportData.constructJson"><code class="name flex">
+<span>def <span class="ident">constructJson</span></span>(<span>tsvContent)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to construct a Json object from a CSV file and return it loaded in an Json object.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>tsvContent</code></strong> :&ensp;<code>array</code></dt>
+<dd>Array containning all data from a CSV</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Json</code> <code>object</code></dt>
+<dd>Return a Json object gathering all informations for each Gene ID from TAIR database</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def constructJson(tsvContent):
+  &#34;&#34;&#34;Allow to construct a Json object from a CSV file and return it loaded in an Json object.
+
+  Parameters
+  ----------
+  tsvContent : array
+      Array containning all data from a CSV
+
+  Returns
+  -------
+  Json object
+      Return a Json object gathering all informations for each Gene ID from TAIR database
+  &#34;&#34;&#34;
+  # Header of TSV file
+  # Locus       Gene Model(s)   GO term (GO ID) cat     code    GO Slim Reference       Made by: date last modified
+  # One exemple
+  # AT5G15930   2146117 AT5G15930       Rab GTPase binding      GO:0017137      8668    func    protein binding IBA     Communication:501741973         08/03/2018 00:00:00
+
+  # Initialize an object to store json in construction
+  jsonObject = {}
+  # Read TSV content
+  for tsvLine in tsvContent:
+    tempObject = {}
+    if tsvLine[0] not in jsonObject:
+      jsonObject[tsvLine[0]] = []
+    # If TAIR found a result for this line save it in a dictionnary, with gene ID as key and different informations as value
+    if len(tsvLine) == 12:
+      # tempObject[&#34;TAIR_accession&#34;] = tsvLine[1]
+      tempObject[&#34;Model&#34;] = tsvLine[2]
+      tempObject[&#34;GO_Term&#34;] = tsvLine[3]
+      tempObject[&#34;GO_ID&#34;] = tsvLine[4]
+      # tempObject[&#34;TAIR_Keyword_ID&#34;] = tsvLine[5]
+      tempObject[&#34;Cat&#34;] = tsvLine[6]
+      tempObject[&#34;GOslim_reference&#34;] = tsvLine[7]
+      tempObject[&#34;Evidence_code&#34;] = tsvLine[8]
+      # tempObject[&#34;Reference&#34;] = tsvLine[9]
+      # tempObject[&#34;Date_last_modified&#34;] = tsvLine[11]
+    else:
+      tempObject = {&#34;Not Found&#34;: &#34;Null&#34;}
+    jsonObject[tsvLine[0]].append(tempObject)
+  return(jsonObject)</code></pre>
+</details>
+</dd>
+<dt id="module.importExportData.openJsonFile"><code class="name flex">
+<span>def <span class="ident">openJsonFile</span></span>(<span>filename)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to open a Json file and return it loaded in an object.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>string</code></dt>
+<dd>Path to a Json file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Json</code> <code>object</code></dt>
+<dd>Return a Json object containning loaded local data</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def openJsonFile(filename):
+  &#34;&#34;&#34;Allow to open a Json file and return it loaded in an object.
+
+  Parameters
+  ----------
+  filename : string
+      Path to a Json file.
+
+  Returns
+  -------
+  Json object
+      Return a Json object containning loaded local data
+
+  &#34;&#34;&#34;
+  with open(filename, &#39;r&#39;, encoding=&#39;utf-8&#39;) as json_file:
+    json_data = json.load(json_file)
+  return(json_data)</code></pre>
+</details>
+</dd>
+<dt id="module.importExportData.parseCorgiOutput"><code class="name flex">
+<span>def <span class="ident">parseCorgiOutput</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to parse CoRGI output file and return parsed information of genes and metadata of experimentations throught all iterations of CoRGI experimentations</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>path</code></strong> :&ensp;<code>string</code></dt>
+<dd>Path of CoRGI output file</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>[experiments, genes] : array
+Return an array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def parseCorgiOutput(path):
+  &#34;&#34;&#34;Allow to parse CoRGI output file and return parsed information of genes and metadata of experimentations throught all iterations of CoRGI experimentations
+
+  Parameters
+  ----------
+  path : string
+      Path of CoRGI output file
+
+  Returns
+  -------
+  [experiments, genes] : array
+      Return an array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations
+  &#34;&#34;&#34;
+  experiments = {&#34;iteration_0&#34;: []}
+  genes = {&#34;iteration_0&#34;: []}
+  iteration = &#34;iteration_0&#34;
+  i = 0
+  with open(path, mode=&#39;r&#39;) as algorithmOutput:
+    for line in algorithmOutput:
+      for lineSplitted in line.split():
+        if lineSplitted == &#34;Itération&#34;:
+          splittedIterationString = iteration.split(&#39;_&#39;)
+          i = line.split()[1]
+          iteration = splittedIterationString[0] + &#34;_&#34; + line.split()[1]
+          # Initialize a new array of object in both array, to store future IDs of experiments or genes
+          experiments[iteration] = []
+          genes[iteration] = []
+        # If current line is a ID of experiment
+        if re.match(&#34;^X&#34;, lineSplitted):
+          # Delete X char, and replace &#39;.&#39; by a &#39;#&#39; to fit with orignals IDs
+          lineSplitted = lineSplitted[1:].replace(&#39;.&#39;, &#39;#&#39;)
+          if i != 0:
+            experiments[iteration].append(lineSplitted)
+        # If current line is a ID of gene
+        if re.match(&#34;^AT&#34;, lineSplitted):
+          if i != 0:
+            genes[iteration].append(lineSplitted)
+  # Return results in an array of array, allowing a more compact return, easy to parse
+  return [experiments, genes]</code></pre>
+</details>
+</dd>
+<dt id="module.importExportData.parseTSV"><code class="name flex">
+<span>def <span class="ident">parseTSV</span></span>(<span>filename)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to open a CSV file and return it loaded in an array.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>string</code></dt>
+<dd>Path to a CSV file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Array</code></dt>
+<dd>Return an array containning all data from a CSV file</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def parseTSV(filename):
+  &#34;&#34;&#34;Allow to open a CSV file and return it loaded in an array.
+
+  Parameters
+  ----------
+  filename : string
+      Path to a CSV file.
+
+  Returns
+  -------
+  Array
+      Return an array containning all data from a CSV file
+  &#34;&#34;&#34;
+  tsvContent = []
+  with open(filename) as tsvFile:
+    # Parse TSV
+    reader = csv.reader(tsvFile, dialect=&#34;excel-tab&#34;)
+    # Skip header
+    next(reader, None)
+    # Read parsed csv file
+    for line in reader:
+      tsvContent.append(line)
+  return(tsvContent)</code></pre>
+</details>
+</dd>
+<dt id="module.importExportData.prepareJson"><code class="name flex">
+<span>def <span class="ident">prepareJson</span></span>(<span>args)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to download and parse an ontology file in Json format using some bash commands</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>config</code></strong> :&ensp;<code>Dictionnary</code></dt>
+<dd>Dictionnary gathering all configuration variables.</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def prepareJson(args):
+  &#34;&#34;&#34;Allow to download and parse an ontology file in Json format using some bash commands
+
+  Parameters
+  ----------
+  config : Dictionnary
+      Dictionnary gathering all configuration variables.
+  &#34;&#34;&#34;
+  # Check if file arleady exist, avoiding to re download it
+  if not os.path.isfile(args.GOpath):
+    # Download Json file using given path and url
+    bashCommand = &#34;wget -nc -O &#34; + \
+        args.GOpath + &#34; &#34; + args.url
+    os.system(bashCommand)
+    # Change sub to source, fitting with d3.js requirements
+    bashCommand = &#39;sed -i \&#39;s/\&#34;sub\&#34;/\&#34;source\&#34;/g\&#39; &#39; + \
+        args.GOpath
+    os.system(bashCommand)
+    # Change obj to target, fitting with d3.js requirements
+    bashCommand = &#39;sed -i \&#39;s/\&#34;obj\&#34;/\&#34;target\&#34;/g\&#39; &#39; + \
+        args.GOpath
+    os.system(bashCommand)
+    # Few changes to produce a valid Json
+    bashCommand = &#39;sed -i \&#39;2d\&#39; &#39; + args.GOpath
+    os.system(bashCommand)
+    bashCommand = &#39;sed -i \&#39;$d\&#39; &#39; + args.GOpath
+    os.system(bashCommand)
+    bashCommand = &#39;sed -i \&#39;$d\&#39; &#39; + args.GOpath
+    os.system(bashCommand)
+    bashCommand = &#39;echo \&#39;}\&#39; &gt;&gt; &#39; + args.GOpath
+    os.system(bashCommand)</code></pre>
+</details>
+</dd>
+<dt id="module.importExportData.recursiveSedInJson"><code class="name flex">
+<span>def <span class="ident">recursiveSedInJson</span></span>(<span>jsonFile, searchedKey)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to change particular values from targeted key in recursive fashion.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>jsonFile</code></strong> :&ensp;<code>Json</code> <code>object</code></dt>
+<dd>a Json object.</dd>
+<dt><strong><code>searchedKey</code></strong> :&ensp;<code>string</code></dt>
+<dd>a string representing a key of JSON file</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Json</code> <code>object</code></dt>
+<dd>Return a modified Json object</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def recursiveSedInJson(jsonFile, searchedKey):
+  &#34;&#34;&#34;Allow to change particular values from targeted key in recursive fashion.
+
+  Parameters
+  ----------
+  jsonFile : Json object
+      a Json object.
+
+  searchedKey : string
+      a string representing a key of JSON file
+
+  Returns
+  -------
+  Json object
+      Return a modified Json object
+
+  &#34;&#34;&#34;
+  # Check if function can be launch on current iteration
+  if type(jsonFile) is dict and jsonFile:
+    # Iterate through Json
+    for key in jsonFile:
+      # If key is found
+      if key == searchedKey:
+        if key == &#39;pred&#39;:
+          # Resolving some PURL into predicators
+          # https://www.ebi.ac.uk/miriam/main/mdb?section=uris
+          jsonFile[key] = jsonFile[key].replace(
+              &#39;http://purl.obolibrary.org/obo/BFO_0000050&#39;, &#39;part_of&#39;)
+          jsonFile[key] = jsonFile[key].replace(
+              &#39;http://purl.obolibrary.org/obo/RO_0002211&#39;, &#39;regulates&#39;)
+          jsonFile[key] = jsonFile[key].replace(
+              &#39;http://purl.obolibrary.org/obo/BFO_0000066&#39;, &#39;occurs_in&#39;)
+        else:
+          # Remove url and keep only GO ID
+          jsonFile[key] = re.sub(
+              r&#34;(http:\/\/purl\.obolibrary\.org\/obo\/)([A-Z]{2,3})(_)(\d{7})&#34;, &#34;\g&lt;2&gt;:\g&lt;4&gt;&#34;, jsonFile[key])
+      # Recursive launch of functionGO in Json format
+      recursiveSedInJson(jsonFile[key], searchedKey)
+  elif type(jsonFile) is list and jsonFile:
+    for entity in jsonFile:
+      recursiveSedInJson(entity, searchedKey)
+
+  return(jsonFile)</code></pre>
+</details>
+</dd>
+<dt id="module.importExportData.saveJsonFile"><code class="name flex">
+<span>def <span class="ident">saveJsonFile</span></span>(<span>filename, jsonObject)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to open a Json file and return it loaded in an object.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>filename</code></strong> :&ensp;<code>string</code></dt>
+<dd>Path to a Json file.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Json</code> <code>object</code></dt>
+<dd>Return a Json object containning loaded local data</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def saveJsonFile(filename, jsonObject):
+  &#34;&#34;&#34;Allow to open a Json file and return it loaded in an object.
+
+  Parameters
+  ----------
+  filename : string
+      Path to a Json file.
+
+  Returns
+  -------
+  Json object
+      Return a Json object containning loaded local data
+
+  &#34;&#34;&#34;
+  #
+  with open(filename, mode=&#39;w+&#39;, encoding=&#39;utf-8&#39;) as outputJson:
+    # Dump Json object in a file, add  indent=2, to not minify json
+    json.dump(jsonObject, outputJson, separators=(&#39;,&#39;, &#39;: &#39;))</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="module" href="index.html">module</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="two-column">
+<li><code><a title="module.importExportData.constructJson" href="#module.importExportData.constructJson">constructJson</a></code></li>
+<li><code><a title="module.importExportData.openJsonFile" href="#module.importExportData.openJsonFile">openJsonFile</a></code></li>
+<li><code><a title="module.importExportData.parseCorgiOutput" href="#module.importExportData.parseCorgiOutput">parseCorgiOutput</a></code></li>
+<li><code><a title="module.importExportData.parseTSV" href="#module.importExportData.parseTSV">parseTSV</a></code></li>
+<li><code><a title="module.importExportData.prepareJson" href="#module.importExportData.prepareJson">prepareJson</a></code></li>
+<li><code><a title="module.importExportData.recursiveSedInJson" href="#module.importExportData.recursiveSedInJson">recursiveSedInJson</a></code></li>
+<li><code><a title="module.importExportData.saveJsonFile" href="#module.importExportData.saveJsonFile">saveJsonFile</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

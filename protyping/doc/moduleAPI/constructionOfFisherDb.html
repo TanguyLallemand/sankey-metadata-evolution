@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>module.constructionOfFisherDb API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>module.constructionOfFisherDb</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+#
+################################################################################
+#
+#  CoRGI : The Co-Regulated Gene Investigator
+#
+#  Copyright: 2019 INRA http://www.inra.fr
+#
+#  License:
+#    CeCILL: http://www.cecill.info/licences/Licence_CeCILL_V2-en.html
+#    See the LICENCE file in the project&#39;s top-level directory for details.
+#
+#  Author:
+#    * Tanguy LALLEMAND, BIDEFI team, IRHS
+#
+################################################################################
+
+
+def constructTAIRDatabaseJson(tsvContent):
+  &#34;&#34;&#34;Allow to construct a Json object from a TSV file from TAIR database and return it loaded in an Json object.
+
+  Parameters
+  ----------
+  tsvContent : array
+      Array containning all data from a CSV
+
+  Returns
+  -------
+  dictionnary
+      Return a Json object gathering all informations for each Gene ID from TAIR database
+  &#34;&#34;&#34;
+  # Header of TSV file
+  # Locus       Gene Model(s)   GO term (GO ID) cat     code    GO Slim Reference       Made by: date last modified
+  # One exemple
+  # AT5G15930   2146117 AT5G15930       Rab GTPase binding      GO:0017137      8668    func    protein binding IBA     Communication:501741973         08/03/2018 00:00:00
+  # Accesion by index
+  #
+  # 1. locus name: standard AGI convention name
+  # 2. TAIR accession:the unique identifier for an object in the TAIR database-
+  # the object type is the prefix, followed by a unique accession number(e.g. gene:12345).
+  # 3. object name : the name of the object (gene, protein, locus) being annotated.
+  # 4. relationship type: the relationship between the annotated object and the GO term
+  # 5. GO term: the actual string of letters corresponding to the GO ID
+  # 6. GO ID: the unique identifier for a GO term.
+  # 7. TAIR Keyword ID: the unique identifier for a keyword in the TAIR database.
+  # 8.  Aspect: F=molecular function, C=cellular component, P=biological 13process.
+  # 9. GOslim term: high level GO term helps in functional categorization.
+  # 10. Evidence code: three letter code for evidence types (see: http://www.geneontology.org/GO.evidence.html).
+  # 11. Evidence description: the analysis that was done to support the annotation
+  # 12. Evidence with: supporting evidence for IGI, IPI, IC, IEA and ISS annotations
+  # 13. Reference: Either a TAIR accession for a reference (reference table: reference_id) or reference from PubMed (e.g. PMID:1234).
+  # 14. Annotator: TAIR, TIGR, GOC (GO Consortium), UniProt, IntAct or a TAIR community member
+  # 15. Date annotated: date the annotation was made.
+  # Initialize an object to store json in construction
+  jsonObject = {}
+  # Read TSV content
+  for tsvLine in tsvContent:
+    tempObject = {}
+    if tsvLine[0] not in jsonObject:
+      jsonObject[tsvLine[0]] = []
+    # If TAIR found a result for this line save it in a dictionnary, with gene ID as key and different informations as value
+    # All informations and index to access it are in comments. For this script only usefull informations are saved in order to save more memory
+    if len(tsvLine) == 15:
+      # tempObject[&#34;Locus_name&#34;] = tsvLine[0]
+      # tempObject[&#34;TAIR_accession&#34;] = tsvLine[1]
+      # tempObject[&#34;Object_name&#34;] = tsvLine[2]
+      # tempObject[&#34;Relationship_type&#34;] = tsvLine[3]
+      tempObject[&#34;GO_Term&#34;] = tsvLine[4]
+      tempObject[&#34;GO_ID&#34;] = tsvLine[5]
+      # tempObject[&#34;TAIR_Keyword_ID&#34;] = tsvLine[6]
+      tempObject[&#34;Aspect&#34;] = tsvLine[7]
+      tempObject[&#34;GOslim_reference&#34;] = tsvLine[8]
+      # tempObject[&#34;Evidence_code&#34;] = tsvLine[9]
+      # tempObject[&#34;Evidence_description&#34;] = tsvLine[10]
+      # tempObject[&#34;Evidence_with&#34;] = tsvLine[11]
+      # tempObject[&#34;Reference&#34;] = tsvLine[12]
+      # tempObject[&#34;Annotator&#34;] = tsvLine[13]
+      # tempObject[&#34;Date_annotated&#34;] = tsvLine[14]
+    else:
+      tempObject = {&#34;Not Found&#34;: &#34;Null&#34;}
+    jsonObject[tsvLine[0]].append(tempObject)
+  return(jsonObject)
+
+
+def parseTAIRDatabase(TAIRJson, TAIRDatabase):
+  &#34;&#34;&#34;
+  Count every occurence of every GO slim term in TAIR database
+  Parameters
+  ----------
+  TAIRJson : dicctionnary of arrays
+      A dictionnary storing all TAIR annotations
+  TAIRDatabase: dictionnary
+      Empty dictionnary created to store output json object
+  Returns
+  -------
+  dictionnary
+      Return a Json object gathering count of all GO Slim terms found in TAIR database
+  &#34;&#34;&#34;
+  # Iteration throught TAIR database object
+  for geneID in TAIRJson:
+    for GOentry in TAIRJson[geneID]:
+      # Try to get a GOslim_reference
+      try:
+        GOentry[&#34;GOslim_reference&#34;]
+      except:
+        continue
+      # If this Go SLim term does not exist yet in output dictionnary, create it
+      if GOentry[&#34;GOslim_reference&#34;] not in TAIRDatabase:
+        TAIRDatabase[GOentry[&#34;GOslim_reference&#34;]] = 1
+      # If this Go SLim term already exist just count it
+      else:
+        TAIRDatabase[GOentry[&#34;GOslim_reference&#34;]
+                     ] = TAIRDatabase[GOentry[&#34;GOslim_reference&#34;]] + 1
+      TAIRDatabase[&#34;total&#34;] = TAIRDatabase[&#34;total&#34;] + 1
+
+
+def parseCoRGIExperiments(catmaMetadataJson, corgiExperiments, TAIRDatabase, metadataTemplate):
+  &#34;&#34;&#34;Allow to create all nodes to visualize evolution of metadata conditions. This algorithm keeps in mind the fact that data are sequential and create nodes for each iterations
+
+  Parameters
+  ----------
+  corgiExperiments : Dictionnary
+      Json with as keys iterations name and in value an array of all experimentation ID involved in iteration
+  catmaMetadataJson : Dictionnary
+      JSON gathering all informations of each experimentations. As key, ID of experimentation, as value an object of metadata
+  metadataTemplate : Dictionnary
+      A JSON object gathering all possible nodes. Based on Biological insight tree
+  TAIRDatabase: dictionnary
+      A Dictionnary storing all occurences count for GO Slim terms and experiments category.
+  &#34;&#34;&#34;
+  # Iterating through experiments
+  for experimentsIterator in corgiExperiments:
+    # Split iteration key to get iteration number
+    currentIterationNumber = experimentsIterator.split(&#34;_&#34;)[1]
+    # Iterating through all ID of expermimentation for current iteration of CoRGI
+    for idOfExperrimentation in corgiExperiments[experimentsIterator]:
+      # Iterating through four possible conditions
+      for i in range(1, 5):
+        # Try to check if current condition exist
+        try:
+          catmaMetadataJson[idOfExperrimentation][&#34;cond&#34; + str(i)][0]
+        # If condition not exist pass to next condition
+        except:
+          pass
+        else:
+          # Iterating through nodes of metadata template
+          for node in metadataTemplate[&#34;nodes&#34;]:
+            # If right node template is found
+            # node[&#34;id&#34;]=2.2.4
+            # str(i)=2
+            # catmaMetadataJson[&#34;1#2#4&#34;][&#34;cond2&#34;]=2.4
+            if node[&#34;id&#34;] == str(i) + &#34;.&#34; + catmaMetadataJson[idOfExperrimentation][&#34;cond&#34; + str(i)][0]:
+              category = node[&#34;lbl&#34;]
+          # If this label does not exist yet in occurence count
+          if category not in TAIRDatabase:
+            # Initialize it, and add first occurence
+            TAIRDatabase[category] = 1
+          else:
+            # Add one occurence
+            TAIRDatabase[category] = TAIRDatabase[category] + 1
+      # Count also total of occurences
+      TAIRDatabase[&#34;total&#34;] = TAIRDatabase[&#34;total&#34;] + 1</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="module.constructionOfFisherDb.constructTAIRDatabaseJson"><code class="name flex">
+<span>def <span class="ident">constructTAIRDatabaseJson</span></span>(<span>tsvContent)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to construct a Json object from a TSV file from TAIR database and return it loaded in an Json object.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>tsvContent</code></strong> :&ensp;<code>array</code></dt>
+<dd>Array containning all data from a CSV</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dictionnary</code></dt>
+<dd>Return a Json object gathering all informations for each Gene ID from TAIR database</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def constructTAIRDatabaseJson(tsvContent):
+  &#34;&#34;&#34;Allow to construct a Json object from a TSV file from TAIR database and return it loaded in an Json object.
+
+  Parameters
+  ----------
+  tsvContent : array
+      Array containning all data from a CSV
+
+  Returns
+  -------
+  dictionnary
+      Return a Json object gathering all informations for each Gene ID from TAIR database
+  &#34;&#34;&#34;
+  # Header of TSV file
+  # Locus       Gene Model(s)   GO term (GO ID) cat     code    GO Slim Reference       Made by: date last modified
+  # One exemple
+  # AT5G15930   2146117 AT5G15930       Rab GTPase binding      GO:0017137      8668    func    protein binding IBA     Communication:501741973         08/03/2018 00:00:00
+  # Accesion by index
+  #
+  # 1. locus name: standard AGI convention name
+  # 2. TAIR accession:the unique identifier for an object in the TAIR database-
+  # the object type is the prefix, followed by a unique accession number(e.g. gene:12345).
+  # 3. object name : the name of the object (gene, protein, locus) being annotated.
+  # 4. relationship type: the relationship between the annotated object and the GO term
+  # 5. GO term: the actual string of letters corresponding to the GO ID
+  # 6. GO ID: the unique identifier for a GO term.
+  # 7. TAIR Keyword ID: the unique identifier for a keyword in the TAIR database.
+  # 8.  Aspect: F=molecular function, C=cellular component, P=biological 13process.
+  # 9. GOslim term: high level GO term helps in functional categorization.
+  # 10. Evidence code: three letter code for evidence types (see: http://www.geneontology.org/GO.evidence.html).
+  # 11. Evidence description: the analysis that was done to support the annotation
+  # 12. Evidence with: supporting evidence for IGI, IPI, IC, IEA and ISS annotations
+  # 13. Reference: Either a TAIR accession for a reference (reference table: reference_id) or reference from PubMed (e.g. PMID:1234).
+  # 14. Annotator: TAIR, TIGR, GOC (GO Consortium), UniProt, IntAct or a TAIR community member
+  # 15. Date annotated: date the annotation was made.
+  # Initialize an object to store json in construction
+  jsonObject = {}
+  # Read TSV content
+  for tsvLine in tsvContent:
+    tempObject = {}
+    if tsvLine[0] not in jsonObject:
+      jsonObject[tsvLine[0]] = []
+    # If TAIR found a result for this line save it in a dictionnary, with gene ID as key and different informations as value
+    # All informations and index to access it are in comments. For this script only usefull informations are saved in order to save more memory
+    if len(tsvLine) == 15:
+      # tempObject[&#34;Locus_name&#34;] = tsvLine[0]
+      # tempObject[&#34;TAIR_accession&#34;] = tsvLine[1]
+      # tempObject[&#34;Object_name&#34;] = tsvLine[2]
+      # tempObject[&#34;Relationship_type&#34;] = tsvLine[3]
+      tempObject[&#34;GO_Term&#34;] = tsvLine[4]
+      tempObject[&#34;GO_ID&#34;] = tsvLine[5]
+      # tempObject[&#34;TAIR_Keyword_ID&#34;] = tsvLine[6]
+      tempObject[&#34;Aspect&#34;] = tsvLine[7]
+      tempObject[&#34;GOslim_reference&#34;] = tsvLine[8]
+      # tempObject[&#34;Evidence_code&#34;] = tsvLine[9]
+      # tempObject[&#34;Evidence_description&#34;] = tsvLine[10]
+      # tempObject[&#34;Evidence_with&#34;] = tsvLine[11]
+      # tempObject[&#34;Reference&#34;] = tsvLine[12]
+      # tempObject[&#34;Annotator&#34;] = tsvLine[13]
+      # tempObject[&#34;Date_annotated&#34;] = tsvLine[14]
+    else:
+      tempObject = {&#34;Not Found&#34;: &#34;Null&#34;}
+    jsonObject[tsvLine[0]].append(tempObject)
+  return(jsonObject)</code></pre>
+</details>
+</dd>
+<dt id="module.constructionOfFisherDb.parseCoRGIExperiments"><code class="name flex">
+<span>def <span class="ident">parseCoRGIExperiments</span></span>(<span>catmaMetadataJson, corgiExperiments, TAIRDatabase, metadataTemplate)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to create all nodes to visualize evolution of metadata conditions. This algorithm keeps in mind the fact that data are sequential and create nodes for each iterations</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>corgiExperiments</code></strong> :&ensp;<code>Dictionnary</code></dt>
+<dd>Json with as keys iterations name and in value an array of all experimentation ID involved in iteration</dd>
+<dt><strong><code>catmaMetadataJson</code></strong> :&ensp;<code>Dictionnary</code></dt>
+<dd>JSON gathering all informations of each experimentations. As key, ID of experimentation, as value an object of metadata</dd>
+<dt><strong><code>metadataTemplate</code></strong> :&ensp;<code>Dictionnary</code></dt>
+<dd>A JSON object gathering all possible nodes. Based on Biological insight tree</dd>
+<dt><strong><code>TAIRDatabase</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>A Dictionnary storing all occurences count for GO Slim terms and experiments category.</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def parseCoRGIExperiments(catmaMetadataJson, corgiExperiments, TAIRDatabase, metadataTemplate):
+  &#34;&#34;&#34;Allow to create all nodes to visualize evolution of metadata conditions. This algorithm keeps in mind the fact that data are sequential and create nodes for each iterations
+
+  Parameters
+  ----------
+  corgiExperiments : Dictionnary
+      Json with as keys iterations name and in value an array of all experimentation ID involved in iteration
+  catmaMetadataJson : Dictionnary
+      JSON gathering all informations of each experimentations. As key, ID of experimentation, as value an object of metadata
+  metadataTemplate : Dictionnary
+      A JSON object gathering all possible nodes. Based on Biological insight tree
+  TAIRDatabase: dictionnary
+      A Dictionnary storing all occurences count for GO Slim terms and experiments category.
+  &#34;&#34;&#34;
+  # Iterating through experiments
+  for experimentsIterator in corgiExperiments:
+    # Split iteration key to get iteration number
+    currentIterationNumber = experimentsIterator.split(&#34;_&#34;)[1]
+    # Iterating through all ID of expermimentation for current iteration of CoRGI
+    for idOfExperrimentation in corgiExperiments[experimentsIterator]:
+      # Iterating through four possible conditions
+      for i in range(1, 5):
+        # Try to check if current condition exist
+        try:
+          catmaMetadataJson[idOfExperrimentation][&#34;cond&#34; + str(i)][0]
+        # If condition not exist pass to next condition
+        except:
+          pass
+        else:
+          # Iterating through nodes of metadata template
+          for node in metadataTemplate[&#34;nodes&#34;]:
+            # If right node template is found
+            # node[&#34;id&#34;]=2.2.4
+            # str(i)=2
+            # catmaMetadataJson[&#34;1#2#4&#34;][&#34;cond2&#34;]=2.4
+            if node[&#34;id&#34;] == str(i) + &#34;.&#34; + catmaMetadataJson[idOfExperrimentation][&#34;cond&#34; + str(i)][0]:
+              category = node[&#34;lbl&#34;]
+          # If this label does not exist yet in occurence count
+          if category not in TAIRDatabase:
+            # Initialize it, and add first occurence
+            TAIRDatabase[category] = 1
+          else:
+            # Add one occurence
+            TAIRDatabase[category] = TAIRDatabase[category] + 1
+      # Count also total of occurences
+      TAIRDatabase[&#34;total&#34;] = TAIRDatabase[&#34;total&#34;] + 1</code></pre>
+</details>
+</dd>
+<dt id="module.constructionOfFisherDb.parseTAIRDatabase"><code class="name flex">
+<span>def <span class="ident">parseTAIRDatabase</span></span>(<span>TAIRJson, TAIRDatabase)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Count every occurence of every GO slim term in TAIR database
+Parameters</p>
+<hr>
+<dl>
+<dt><strong><code>TAIRJson</code></strong> :&ensp;<code>dicctionnary</code> of <code>arrays</code></dt>
+<dd>A dictionnary storing all TAIR annotations</dd>
+<dt><strong><code>TAIRDatabase</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>Empty dictionnary created to store output json object</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dictionnary</code></dt>
+<dd>Return a Json object gathering count of all GO Slim terms found in TAIR database</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def parseTAIRDatabase(TAIRJson, TAIRDatabase):
+  &#34;&#34;&#34;
+  Count every occurence of every GO slim term in TAIR database
+  Parameters
+  ----------
+  TAIRJson : dicctionnary of arrays
+      A dictionnary storing all TAIR annotations
+  TAIRDatabase: dictionnary
+      Empty dictionnary created to store output json object
+  Returns
+  -------
+  dictionnary
+      Return a Json object gathering count of all GO Slim terms found in TAIR database
+  &#34;&#34;&#34;
+  # Iteration throught TAIR database object
+  for geneID in TAIRJson:
+    for GOentry in TAIRJson[geneID]:
+      # Try to get a GOslim_reference
+      try:
+        GOentry[&#34;GOslim_reference&#34;]
+      except:
+        continue
+      # If this Go SLim term does not exist yet in output dictionnary, create it
+      if GOentry[&#34;GOslim_reference&#34;] not in TAIRDatabase:
+        TAIRDatabase[GOentry[&#34;GOslim_reference&#34;]] = 1
+      # If this Go SLim term already exist just count it
+      else:
+        TAIRDatabase[GOentry[&#34;GOslim_reference&#34;]
+                     ] = TAIRDatabase[GOentry[&#34;GOslim_reference&#34;]] + 1
+      TAIRDatabase[&#34;total&#34;] = TAIRDatabase[&#34;total&#34;] + 1</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="module" href="index.html">module</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="module.constructionOfFisherDb.constructTAIRDatabaseJson" href="#module.constructionOfFisherDb.constructTAIRDatabaseJson">constructTAIRDatabaseJson</a></code></li>
+<li><code><a title="module.constructionOfFisherDb.parseCoRGIExperiments" href="#module.constructionOfFisherDb.parseCoRGIExperiments">parseCoRGIExperiments</a></code></li>
+<li><code><a title="module.constructionOfFisherDb.parseTAIRDatabase" href="#module.constructionOfFisherDb.parseTAIRDatabase">parseTAIRDatabase</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

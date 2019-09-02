@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>module.generalParsing API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>module.generalParsing</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+#
+################################################################################
+#
+#  CoRGI : The Co-Regulated Gene Investigator
+#
+#  Copyright: 2019 INRA http://www.inra.fr
+#
+#  License:
+#    CeCILL: http://www.cecill.info/licences/Licence_CeCILL_V2-en.html
+#    See the LICENCE file in the project&#39;s top-level directory for details.
+#
+#  Author:
+#    * Tanguy LALLEMAND, BIDEFI team, IRHS
+#
+################################################################################
+
+import csv
+import json
+import os
+import re
+
+
+def addEdges(jsonFile):
+  &#34;&#34;&#34;Add edges between nodes if necessary. This means if:
+    - Iteration of source node is lower than target node
+    - If source and target ndoes have mappedDatas
+    - If names are the same
+
+  Parameters
+  ----------
+  jsonFile : array of dictionnaries
+      Array gathering all nodes of graph
+
+  Returns
+  -------
+  array of dictionnary
+      array gathering all links objects
+  &#34;&#34;&#34;
+  # Iterate through nodes of JSON in construction
+  for node in jsonFile[&#34;nodes&#34;]:
+    # Try to split node ID
+    nodeSplitted = splitNodesId(node)
+    # If node ID cannot be splitted go to next one
+    if not nodeSplitted:
+      continue
+    # Get a second node
+    for secondNode in jsonFile[&#34;nodes&#34;]:
+      # Try to split node ID
+      secondNodeSplitted = splitNodesId(secondNode)
+      # If node ID cannot be splitted go to next one
+      if not secondNodeSplitted:
+        continue
+      # Add edges between nodes if necessary. This means if:
+      # - Iteration of source node is lower than target node
+      # - If source and target ndoes have mappedDatas
+      # - If names are the same
+      if nodeSplitted[0] &lt; secondNodeSplitted[0] and len(node[&#34;mappedData&#34;]) &gt; 0 and len(secondNode[&#34;mappedData&#34;]) &gt; 0 and nodeSplitted[1] == secondNodeSplitted[1]:
+        # Construct link
+        edge = {&#34;source&#34;: nodeSplitted[1], &#34;target&#34;: secondNodeSplitted[1],
+                &#34;pred&#34;: &#34;to_change&#34;, &#34;value&#34;: 1, &#34;iteration&#34;: int(nodeSplitted[0])}
+        # If this link does not exist yet, add it in final JSON
+        if edge not in jsonFile[&#34;links&#34;]:
+          jsonFile[&#34;links&#34;].append(edge)
+  # Add a value too each links
+  jsonFile = addEdgeValue(jsonFile)
+  return jsonFile
+
+
+def addEdgeValue(jsonFile):
+  &#34;&#34;&#34;Because Sankey d3.js is based on value of edge instead on source and target node&#39;s values, add source relativeValue as value of a link is needed
+
+  Parameters
+  ----------
+  jsonFile : array
+      An array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations
+
+  Returns
+  -------
+  jsonFile : array
+      An array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations
+  &#34;&#34;&#34;
+  # Iterate through edges
+  for edge in jsonFile[&#34;links&#34;]:
+    # Iterate through nodes
+    for node in jsonFile[&#34;nodes&#34;]:
+      # If right node is found
+      if str(edge[&#34;iteration&#34;]) + &#34;#&#34; + edge[&#34;source&#34;] == node[&#34;id&#34;]:
+        # Save value of source node as value of link
+        edge[&#34;value&#34;] = node[&#34;relativeValue&#34;]
+  return jsonFile
+
+
+def splitNodesId(node):
+  &#34;&#34;&#34;Allow to try to split ID of a node decomposing ID and involved iteration based on sperator character (&#39;#&#39;). This function is equipped wit a try block avoiding to crash if script try to split ID of templateNodes that does not have a &#39;#&#39;. In fact, if it possible to access to a second cell, ID is well splitted and fucntion return array of splitted string. Otherwise, node was part of node template and return a false to give to information to script that this ID cannot be splitted
+
+  Parameters
+  ----------
+  node : dictionnary
+      Dictionnary gathering all informations of a node. Here is an example of a node content:
+      {&#34;id&#34;:&#34;3.3.6&#34;, &#34;cond&#34;:&#34;cond3&#34;, &#34;mappedData&#34;:[],&#34;class&#34;:&#34;stress&#34;, &#34;lbl&#34;:&#34;Light (UV...)&#34;, &#34;relativeValue&#34;:41},
+
+  Returns
+  -------
+  nodeSplitted : array
+      array of strings containning splited ID
+  &#34;&#34;&#34;
+  # Split ID using &#39;#&#39; as separator
+  nodeSplitted = node[&#34;id&#34;].split(&#39;#&#39;)
+  # If it possible to access to a second cell, ID is well splitted and fucntion return array of splitted string. Otherwise, node was part of node template and return a false to give to information to script that this ID cannot be splitted
+  try:
+    nodeSplitted[1]
+  except:
+    return False
+  else:
+    return nodeSplitted
+
+
+def getSizeOfIterations(iterations):
+  &#34;&#34;&#34;Allow to get size of each iterations of CoRGI algorithm
+
+  Parameters
+  ----------
+  iterations : dictionnary
+      dictionnary gathering all experiments ID for each iterations
+
+  Returns
+  -------
+  sizeOfIterations : Dictionnary
+      Dictionnary with as key iteration number and as value number of experimentations involved in iteration
+  &#34;&#34;&#34;
+  sizeOfIterations = {}
+  # Iterate through experimentations data
+  for experimentsIterator in iterations:
+    # Get size of each iterations and strore it in an array
+    sizeOfIterations[experimentsIterator] = len(
+        iterations[experimentsIterator])
+  return sizeOfIterations</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="module.generalParsing.addEdgeValue"><code class="name flex">
+<span>def <span class="ident">addEdgeValue</span></span>(<span>jsonFile)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Because Sankey d3.js is based on value of edge instead on source and target node's values, add source relativeValue as value of a link is needed</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>jsonFile</code></strong> :&ensp;<code>array</code></dt>
+<dd>An array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>jsonFile</code></strong> :&ensp;<code>array</code></dt>
+<dd>An array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def addEdgeValue(jsonFile):
+  &#34;&#34;&#34;Because Sankey d3.js is based on value of edge instead on source and target node&#39;s values, add source relativeValue as value of a link is needed
+
+  Parameters
+  ----------
+  jsonFile : array
+      An array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations
+
+  Returns
+  -------
+  jsonFile : array
+      An array containning in first cell a dictionnary of parsed experimentations with iteration number as key and as value an array of parsed metadata of experimentations. Second cell contain gene AT ID in same format as experimentations
+  &#34;&#34;&#34;
+  # Iterate through edges
+  for edge in jsonFile[&#34;links&#34;]:
+    # Iterate through nodes
+    for node in jsonFile[&#34;nodes&#34;]:
+      # If right node is found
+      if str(edge[&#34;iteration&#34;]) + &#34;#&#34; + edge[&#34;source&#34;] == node[&#34;id&#34;]:
+        # Save value of source node as value of link
+        edge[&#34;value&#34;] = node[&#34;relativeValue&#34;]
+  return jsonFile</code></pre>
+</details>
+</dd>
+<dt id="module.generalParsing.addEdges"><code class="name flex">
+<span>def <span class="ident">addEdges</span></span>(<span>jsonFile)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Add edges between nodes if necessary. This means if:
+- Iteration of source node is lower than target node
+- If source and target ndoes have mappedDatas
+- If names are the same</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>jsonFile</code></strong> :&ensp;<code>array</code> of <code>dictionnaries</code></dt>
+<dd>Array gathering all nodes of graph</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>array</code> of <code>dictionnary</code></dt>
+<dd>array gathering all links objects</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def addEdges(jsonFile):
+  &#34;&#34;&#34;Add edges between nodes if necessary. This means if:
+    - Iteration of source node is lower than target node
+    - If source and target ndoes have mappedDatas
+    - If names are the same
+
+  Parameters
+  ----------
+  jsonFile : array of dictionnaries
+      Array gathering all nodes of graph
+
+  Returns
+  -------
+  array of dictionnary
+      array gathering all links objects
+  &#34;&#34;&#34;
+  # Iterate through nodes of JSON in construction
+  for node in jsonFile[&#34;nodes&#34;]:
+    # Try to split node ID
+    nodeSplitted = splitNodesId(node)
+    # If node ID cannot be splitted go to next one
+    if not nodeSplitted:
+      continue
+    # Get a second node
+    for secondNode in jsonFile[&#34;nodes&#34;]:
+      # Try to split node ID
+      secondNodeSplitted = splitNodesId(secondNode)
+      # If node ID cannot be splitted go to next one
+      if not secondNodeSplitted:
+        continue
+      # Add edges between nodes if necessary. This means if:
+      # - Iteration of source node is lower than target node
+      # - If source and target ndoes have mappedDatas
+      # - If names are the same
+      if nodeSplitted[0] &lt; secondNodeSplitted[0] and len(node[&#34;mappedData&#34;]) &gt; 0 and len(secondNode[&#34;mappedData&#34;]) &gt; 0 and nodeSplitted[1] == secondNodeSplitted[1]:
+        # Construct link
+        edge = {&#34;source&#34;: nodeSplitted[1], &#34;target&#34;: secondNodeSplitted[1],
+                &#34;pred&#34;: &#34;to_change&#34;, &#34;value&#34;: 1, &#34;iteration&#34;: int(nodeSplitted[0])}
+        # If this link does not exist yet, add it in final JSON
+        if edge not in jsonFile[&#34;links&#34;]:
+          jsonFile[&#34;links&#34;].append(edge)
+  # Add a value too each links
+  jsonFile = addEdgeValue(jsonFile)
+  return jsonFile</code></pre>
+</details>
+</dd>
+<dt id="module.generalParsing.getSizeOfIterations"><code class="name flex">
+<span>def <span class="ident">getSizeOfIterations</span></span>(<span>iterations)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to get size of each iterations of CoRGI algorithm</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>iterations</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>dictionnary gathering all experiments ID for each iterations</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>sizeOfIterations</code></strong> :&ensp;<code>Dictionnary</code></dt>
+<dd>Dictionnary with as key iteration number and as value number of experimentations involved in iteration</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def getSizeOfIterations(iterations):
+  &#34;&#34;&#34;Allow to get size of each iterations of CoRGI algorithm
+
+  Parameters
+  ----------
+  iterations : dictionnary
+      dictionnary gathering all experiments ID for each iterations
+
+  Returns
+  -------
+  sizeOfIterations : Dictionnary
+      Dictionnary with as key iteration number and as value number of experimentations involved in iteration
+  &#34;&#34;&#34;
+  sizeOfIterations = {}
+  # Iterate through experimentations data
+  for experimentsIterator in iterations:
+    # Get size of each iterations and strore it in an array
+    sizeOfIterations[experimentsIterator] = len(
+        iterations[experimentsIterator])
+  return sizeOfIterations</code></pre>
+</details>
+</dd>
+<dt id="module.generalParsing.splitNodesId"><code class="name flex">
+<span>def <span class="ident">splitNodesId</span></span>(<span>node)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Allow to try to split ID of a node decomposing ID and involved iteration based on sperator character ('#'). This function is equipped wit a try block avoiding to crash if script try to split ID of templateNodes that does not have a '#'. In fact, if it possible to access to a second cell, ID is well splitted and fucntion return array of splitted string. Otherwise, node was part of node template and return a false to give to information to script that this ID cannot be splitted</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>node</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>Dictionnary gathering all informations of a node. Here is an example of a node content:
+{"id":"3.3.6", "cond":"cond3", "mappedData":[],"class":"stress", "lbl":"Light (UV&hellip;)", "relativeValue":41},</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>nodeSplitted</code></strong> :&ensp;<code>array</code></dt>
+<dd>array of strings containning splited ID</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def splitNodesId(node):
+  &#34;&#34;&#34;Allow to try to split ID of a node decomposing ID and involved iteration based on sperator character (&#39;#&#39;). This function is equipped wit a try block avoiding to crash if script try to split ID of templateNodes that does not have a &#39;#&#39;. In fact, if it possible to access to a second cell, ID is well splitted and fucntion return array of splitted string. Otherwise, node was part of node template and return a false to give to information to script that this ID cannot be splitted
+
+  Parameters
+  ----------
+  node : dictionnary
+      Dictionnary gathering all informations of a node. Here is an example of a node content:
+      {&#34;id&#34;:&#34;3.3.6&#34;, &#34;cond&#34;:&#34;cond3&#34;, &#34;mappedData&#34;:[],&#34;class&#34;:&#34;stress&#34;, &#34;lbl&#34;:&#34;Light (UV...)&#34;, &#34;relativeValue&#34;:41},
+
+  Returns
+  -------
+  nodeSplitted : array
+      array of strings containning splited ID
+  &#34;&#34;&#34;
+  # Split ID using &#39;#&#39; as separator
+  nodeSplitted = node[&#34;id&#34;].split(&#39;#&#39;)
+  # If it possible to access to a second cell, ID is well splitted and fucntion return array of splitted string. Otherwise, node was part of node template and return a false to give to information to script that this ID cannot be splitted
+  try:
+    nodeSplitted[1]
+  except:
+    return False
+  else:
+    return nodeSplitted</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="module" href="index.html">module</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="module.generalParsing.addEdgeValue" href="#module.generalParsing.addEdgeValue">addEdgeValue</a></code></li>
+<li><code><a title="module.generalParsing.addEdges" href="#module.generalParsing.addEdges">addEdges</a></code></li>
+<li><code><a title="module.generalParsing.getSizeOfIterations" href="#module.generalParsing.getSizeOfIterations">getSizeOfIterations</a></code></li>
+<li><code><a title="module.generalParsing.splitNodesId" href="#module.generalParsing.splitNodesId">splitNodesId</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

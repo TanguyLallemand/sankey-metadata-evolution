@@ -1,0 +1,27 @@
+{
+  "graph": {
+    "linkColors": {
+      "significative": "#4CAF50",
+      "nonSignificative": "#ABB7B7"
+    }
+  },
+  "SVG": {
+    "numberOfGraph": 4,
+    "margins": {
+      "top": 35,
+      "right": 100,
+      "bottom": 20,
+      "left": 100
+    },
+    "padding": 3
+  },
+  "stat": {
+    "threshold": 0.05,
+    "formatNumber": ",.2f"
+  },
+  "forceDirected": {
+    "distance":90,
+    "strength":3,
+    "nodeRadius":5
+  }
+}

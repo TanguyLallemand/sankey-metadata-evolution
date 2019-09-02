@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.6.2" />
+<title>module.genesParsing API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase;cursor:pointer}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>module.genesParsing</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python"># -*- coding: utf-8 -*-
+#
+################################################################################
+#
+#  CoRGI : The Co-Regulated Gene Investigator
+#
+#  Copyright: 2019 INRA http://www.inra.fr
+#
+#  License:
+#    CeCILL: http://www.cecill.info/licences/Licence_CeCILL_V2-en.html
+#    See the LICENCE file in the project&#39;s top-level directory for details.
+#
+#  Author:
+#    * Tanguy LALLEMAND, BIDEFI team, IRHS
+#
+################################################################################
+
+import copy
+import json
+
+from module.generalParsing import *
+
+
+def createGeneNodes(geneTemplate, iteration):
+  &#34;&#34;&#34;This function allow to create node with unique IDs for every iteration made by CoRGI and return it in three dictionnaries in node-link format. Every possible nodes are created, useless ones will be deleted by parser in a second time
+
+  Parameters
+  ----------
+  geneTemplate : dictionnary
+      Gathering all informations for nodes of last level of GOSlim
+  iteration : dictionnary
+      A dictionnary with iterations names as keys and number of genes in each iterations. Here is an example of dictionnary:
+      {&#39;iteration_1&#39;: 264,
+      &#39;iteration_0&#39;: 434,
+      &#39;iteration_2&#39;: 96,
+      &#39;iteration_3&#39;: 37}
+
+  Returns
+  -------
+  dictionnary
+    A nested dictionnary with a root level the three part of GO as keys and arrays (in node-link format) as values
+    {&#34;cellular_component&#34;: [
+      &#34;nodes&#34;: [], &#34;links&#34;: []
+      ],
+      &#34;molecular_function&#34;: [
+        &#34;nodes&#34;: [], &#34;links&#34;: []
+      ],
+      &#34;biological_process&#34;: [
+        &#34;nodes&#34;: [], &#34;links&#34;: []
+      ]}
+  &#34;&#34;&#34;
+  # Initialize an empty node-link dictionnary
+  geneDictionnary = {&#34;nodes&#34;: [], &#34;links&#34;: []}
+  # Iterate through iteration dictionnary
+  for iterator in iteration:
+    # Get current iteration number by splitting dictionnary key
+    currentIterationNumber = iterator.split(&#34;_&#34;)[1]
+    # Iterate through nodes template
+    for node in geneTemplate:
+      # Deep copy node
+      newNode = copy.deepcopy(node)
+      # Generate a correct ID making an iD like next example:
+      # currentIterationNumber#GOid
+      newNode[&#34;id&#34;] = currentIterationNumber + &#34;#&#34; + node[&#34;id&#34;]
+      # Add iteration
+      newNode[&#34;iteration&#34;] = currentIterationNumber
+      # Append it in dictionnary
+      geneDictionnary[&#34;nodes&#34;].append(newNode)
+  return geneDictionnary
+
+
+def mapOnGeneNodes(corgiGenes, geneInformations, sizeOfIterations, genesJson):
+  &#34;&#34;&#34;Map nodes constructed using GOSlim informations and genes coming from each iterations of CoRGI. Those genes are enrichied using informations coming from TAIR database.
+
+  Parameters
+  ----------
+  corgiGenes : dictionnary
+      A dictionnary with iteration number as key and array of gene as value.
+      {&#39;iteration_1&#39;: [
+        &#39;ATG....&#39;,
+      ],
+      &#39;iteration_0&#39;: [
+      &#39;ATG....&#39;
+      ],
+      &#39;iteration_2&#39;:
+      [&#39;ATG....&#39;,
+      ],
+      &#39;iteration_3&#39;: [
+      &#39;ATG....&#39;
+      ]}
+  geneInformationsJson : dictionnary
+      Dictionnary gathering all informations of every nodes of GOSlim.
+  sizeOfIterations : dictionnary
+      A dictionnary with iterations names as keys and number of genes in each iterations. Here is an example of dictionnary:
+      {&#39;iteration_1&#39;: 264,
+      &#39;iteration_0&#39;: 434,
+      &#39;iteration_2&#39;: 96,
+      &#39;iteration_3&#39;: 37}
+  genesJson : array of dictionnaries
+      Array gathering all nodes and links of graph
+
+  Returns
+  -------
+  geneInformationsJson : dictionnary
+      Dictionnary gathering all informations of every nodes of GOSlim.
+  &#34;&#34;&#34;
+  # Iterating tought experiments
+  for geneIterator in corgiGenes:
+    # Split iteration key to get iteration number
+    currentIterationNumber = geneIterator.split(&#34;_&#34;)[1]
+    # Iterating throught all ID of expermimentation for current iteration of CoRGI
+    for geneID in corgiGenes[geneIterator]:
+      for geneInformation in geneInformations[geneID]:
+        # Try to split GOslim_reference following &#39;|&#39;. In fact, if multiple GOslim_reference exist, they are separated by &#39;|&#39;
+        try:
+          splitedGeneInformation = geneInformation[&#39;GOslim_reference&#39;].split(
+              &#39;|&#39;)
+          splitedGeneInformation[1]
+        # If there is no multiple GOslim_reference search for right label and save this gene in mappedData
+        except:
+          for node in genesJson[&#34;nodes&#34;]:
+            if splitedGeneInformation[0] == node[&#39;lbl&#39;] and node[&#39;iteration&#39;] == currentIterationNumber:
+              # Append gene information in mappedData array of current node
+              appendUniqMappedData(node, geneInformation)
+        # If there is multiple GOslim_reference
+        else:
+          # Loop on every GOslim_reference, search for right GO slim node and save in it gene Informations
+          for splittedGeneLbl in splitedGeneInformation:
+            for node in genesJson[&#34;nodes&#34;]:
+              if splittedGeneLbl == node[&#39;lbl&#39;] and node[&#39;iteration&#39;] == currentIterationNumber:
+                # Append gene information in mappedData array of current node
+                appendUniqMappedData(node, geneInformation)
+  # If node does not have any gene mapped in it, delete it
+  genesJson = purgeEmptyNodes(genesJson)
+  return genesJson
+
+
+def purgeEmptyNodes(genesJson):
+  &#34;&#34;&#34;Delete nodes not represented in CoRGI iterations (he does not gather informations in mappedData)
+
+  Parameters
+  ----------
+  genesJson : array of dictionnaries
+      Array gathering all nodes and links of graph
+
+  Returns
+  -------
+  array of dictionnaries
+      Array gathering all nodes and links of graph
+
+  &#34;&#34;&#34;
+  # Iterate through all nodes
+  for node in genesJson[&#34;nodes&#34;]:
+    # If there is not mapped genes
+    if len(node[&#34;mappedData&#34;]) == 0:
+      # Remove node
+      genesJson[&#34;nodes&#34;].remove(node)
+  return genesJson
+
+
+def appendUniqMappedData(node, geneInformation):
+    seen = set()
+    for dic in node[&#34;mappedData&#34;]:
+      key = (dic[&#39;Model&#39;], dic[&#39;GO_ID&#39;])
+      seen.add(key)
+
+    geneInformationKey = (geneInformation[&#34;Model&#34;],geneInformation[&#34;GO_ID&#34;])
+    if geneInformationKey not in seen:
+      node[&#34;mappedData&#34;].append(geneInformation)
+
+
+
+def prepareGeneTemplate(geneInformationsJson):
+  &#34;&#34;&#34;Construct a nested dictionnary gathering templates of all nodes of last level of GOSlim and put it in right dictionnary following his category in Gene Ontology (cellular_component, molecular_function or biological_process)
+
+  Parameters
+  ----------
+  geneInformationsJson : dictionnary
+      Dictionnary gathering all informations of every nodes of GOSlim
+
+  Returns
+  -------
+  dictionnary
+      A nested dictionnary with a root level the three part of GO as keys and arrays (in node-link format) as values
+      {&#34;cellular_component&#34;: [
+        &#34;nodes&#34;: [], &#34;links&#34;: []
+        ],
+        &#34;molecular_function&#34;: [
+          &#34;nodes&#34;: [], &#34;links&#34;: []
+        ],
+        &#34;biological_process&#34;: [
+          &#34;nodes&#34;: [], &#34;links&#34;: []
+        ]}
+
+  &#34;&#34;&#34;
+  # Initialize a dictionnary of array
+  constructedGenesTemplate = {&#34;cellular_component&#34;: [],
+                              &#34;molecular_function&#34;: [],
+                              &#34;biological_process&#34;: []}
+  # Iterate through all genes
+  for geneInformations in geneInformationsJson[&#34;nodes&#34;]:
+   # If there is more than this infos in basicPropertyValues loop on it until find to which GO part this node belongs
+    for i in range(0, len(geneInformations[&#34;meta&#34;][&#34;basicPropertyValues&#34;])):
+      # If part of GO implicated is stored in meta dictionnary of node
+      if geneInformations[&#34;meta&#34;][&#34;basicPropertyValues&#34;][i][&#34;pred&#34;] == &#39;http://www.geneontology.org/formats/oboInOwl#hasOBONamespace&#39;:
+        geneInformations[&#34;GOPart&#34;]=geneInformations[&#34;meta&#34;][&#34;basicPropertyValues&#34;][i][&#34;val&#34;]
+        # Put gene in right array using meta information
+        constructedGenesTemplate[geneInformations[&#34;meta&#34;]
+                                 [&#34;basicPropertyValues&#34;][i][&#34;val&#34;]].append(geneInformations)
+  return constructedGenesTemplate
+
+
+def getSizeOfGOParts(sizeOfGOPart, jsonFile):
+  &#34;&#34;&#34;For each part of GO calculate how many genes are mapped on each GOSlim term at each iterations.
+
+  Parameters
+  ----------
+  sizeOfGOPart : type
+      Description of parameter `sizeOfGOPart`.
+  jsonFile : array of dictionnaries
+        Array gathering all nodes and links of graph
+  &#34;&#34;&#34;
+  for node in jsonFile[&#34;nodes&#34;]:
+    try:
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +
+                         node[&#34;iteration&#34;]]
+    except:
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; + node[&#34;iteration&#34;]] = 0
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +node[&#34;iteration&#34;]] =sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +node[&#34;iteration&#34;]]+ len(node[&#34;mappedData&#34;])
+    else:
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; + node[&#34;iteration&#34;]] =sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +node[&#34;iteration&#34;]]+ len(node[&#34;mappedData&#34;])
+
+
+def addRelativeValueForGOParts(sizeOfGOPart, jsonFile, name):
+  &#34;&#34;&#34; Calculate for each part of GO percentage of representation of each GO term. To do it, it calculate percentage of genes mapped on current GO term in relation to the total number of genes
+
+  Parameters
+  ----------
+  sizeOfGOPart : dictionnary
+      Describe How many genes are mapped on each GO part for each iteration
+        {
+        &#39;biological_process&#39;: {
+          &#39;iteration_1&#39;: 35,
+          &#39;iteration_2&#39;: 11,
+          &#39;iteration_3&#39;: 1,
+          &#39;iteration_0&#39;: 69},
+        &#39;cellular_component&#39;: {
+          &#39;iteration_1&#39;: 620,
+          &#39;iteration_2&#39;: 294,
+          &#39;iteration_3&#39;: 128,
+          &#39;iteration_0&#39;: 901},
+        &#39;molecular_function&#39;: {
+          &#39;iteration_1&#39;: 46,
+          &#39;iteration_2&#39;: 20,
+          &#39;iteration_3&#39;: 2,
+          &#39;iteration_0&#39;: 80}
+        }
+  jsonFile : array of dictionnaries
+        Array gathering all nodes and links of graph
+  name : string
+      Indicates in which part of GO nodes belongs
+
+  Returns
+  -------
+  jsonFile : array of dictionnaries
+        Array gathering all weighted nodes and links of graph
+  &#34;&#34;&#34;
+  for node in jsonFile[&#34;nodes&#34;]:
+    # Calculate percentage of representation of given node.
+    # Save it in node information, rounded at 3 decimals
+    try:
+      node[&#34;relativeValue&#34;] = round(
+          (len(node[&#34;mappedData&#34;]) / sizeOfGOPart[name][&#34;iteration&#34; + &#34;_&#34; + node[&#34;iteration&#34;]]) * 100, 3)
+    except:
+      node[&#34;relativeValue&#34;]=0
+  return jsonFile</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="module.genesParsing.addRelativeValueForGOParts"><code class="name flex">
+<span>def <span class="ident">addRelativeValueForGOParts</span></span>(<span>sizeOfGOPart, jsonFile, name)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Calculate for each part of GO percentage of representation of each GO term. To do it, it calculate percentage of genes mapped on current GO term in relation to the total number of genes</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>sizeOfGOPart</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>Describe How many genes are mapped on each GO part for each iteration
+{
+'biological_process': {
+'iteration_1': 35,
+'iteration_2': 11,
+'iteration_3': 1,
+'iteration_0': 69},
+'cellular_component': {
+'iteration_1': 620,
+'iteration_2': 294,
+'iteration_3': 128,
+'iteration_0': 901},
+'molecular_function': {
+'iteration_1': 46,
+'iteration_2': 20,
+'iteration_3': 2,
+'iteration_0': 80}
+}</dd>
+<dt><strong><code>jsonFile</code></strong> :&ensp;<code>array</code> of <code>dictionnaries</code></dt>
+<dd>Array gathering all nodes and links of graph</dd>
+<dt><strong><code>name</code></strong> :&ensp;<code>string</code></dt>
+<dd>Indicates in which part of GO nodes belongs</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>jsonFile</code></strong> :&ensp;<code>array</code> of <code>dictionnaries</code></dt>
+<dd>Array gathering all weighted nodes and links of graph</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def addRelativeValueForGOParts(sizeOfGOPart, jsonFile, name):
+  &#34;&#34;&#34; Calculate for each part of GO percentage of representation of each GO term. To do it, it calculate percentage of genes mapped on current GO term in relation to the total number of genes
+
+  Parameters
+  ----------
+  sizeOfGOPart : dictionnary
+      Describe How many genes are mapped on each GO part for each iteration
+        {
+        &#39;biological_process&#39;: {
+          &#39;iteration_1&#39;: 35,
+          &#39;iteration_2&#39;: 11,
+          &#39;iteration_3&#39;: 1,
+          &#39;iteration_0&#39;: 69},
+        &#39;cellular_component&#39;: {
+          &#39;iteration_1&#39;: 620,
+          &#39;iteration_2&#39;: 294,
+          &#39;iteration_3&#39;: 128,
+          &#39;iteration_0&#39;: 901},
+        &#39;molecular_function&#39;: {
+          &#39;iteration_1&#39;: 46,
+          &#39;iteration_2&#39;: 20,
+          &#39;iteration_3&#39;: 2,
+          &#39;iteration_0&#39;: 80}
+        }
+  jsonFile : array of dictionnaries
+        Array gathering all nodes and links of graph
+  name : string
+      Indicates in which part of GO nodes belongs
+
+  Returns
+  -------
+  jsonFile : array of dictionnaries
+        Array gathering all weighted nodes and links of graph
+  &#34;&#34;&#34;
+  for node in jsonFile[&#34;nodes&#34;]:
+    # Calculate percentage of representation of given node.
+    # Save it in node information, rounded at 3 decimals
+    try:
+      node[&#34;relativeValue&#34;] = round(
+          (len(node[&#34;mappedData&#34;]) / sizeOfGOPart[name][&#34;iteration&#34; + &#34;_&#34; + node[&#34;iteration&#34;]]) * 100, 3)
+    except:
+      node[&#34;relativeValue&#34;]=0
+  return jsonFile</code></pre>
+</details>
+</dd>
+<dt id="module.genesParsing.appendUniqMappedData"><code class="name flex">
+<span>def <span class="ident">appendUniqMappedData</span></span>(<span>node, geneInformation)</span>
+</code></dt>
+<dd>
+<section class="desc"></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def appendUniqMappedData(node, geneInformation):
+    seen = set()
+    for dic in node[&#34;mappedData&#34;]:
+      key = (dic[&#39;Model&#39;], dic[&#39;GO_ID&#39;])
+      seen.add(key)
+
+    geneInformationKey = (geneInformation[&#34;Model&#34;],geneInformation[&#34;GO_ID&#34;])
+    if geneInformationKey not in seen:
+      node[&#34;mappedData&#34;].append(geneInformation)</code></pre>
+</details>
+</dd>
+<dt id="module.genesParsing.createGeneNodes"><code class="name flex">
+<span>def <span class="ident">createGeneNodes</span></span>(<span>geneTemplate, iteration)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>This function allow to create node with unique IDs for every iteration made by CoRGI and return it in three dictionnaries in node-link format. Every possible nodes are created, useless ones will be deleted by parser in a second time</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>geneTemplate</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>Gathering all informations for nodes of last level of GOSlim</dd>
+<dt><strong><code>iteration</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>A dictionnary with iterations names as keys and number of genes in each iterations. Here is an example of dictionnary:
+{'iteration_1': 264,
+'iteration_0': 434,
+'iteration_2': 96,
+'iteration_3': 37}</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dictionnary</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<p>A nested dictionnary with a root level the three part of GO as keys and arrays (in node-link format) as values
+{"cellular_component": [
+"nodes": [], "links": []
+],
+"molecular_function": [
+"nodes": [], "links": []
+],
+"biological_process": [
+"nodes": [], "links": []
+]}</p></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def createGeneNodes(geneTemplate, iteration):
+  &#34;&#34;&#34;This function allow to create node with unique IDs for every iteration made by CoRGI and return it in three dictionnaries in node-link format. Every possible nodes are created, useless ones will be deleted by parser in a second time
+
+  Parameters
+  ----------
+  geneTemplate : dictionnary
+      Gathering all informations for nodes of last level of GOSlim
+  iteration : dictionnary
+      A dictionnary with iterations names as keys and number of genes in each iterations. Here is an example of dictionnary:
+      {&#39;iteration_1&#39;: 264,
+      &#39;iteration_0&#39;: 434,
+      &#39;iteration_2&#39;: 96,
+      &#39;iteration_3&#39;: 37}
+
+  Returns
+  -------
+  dictionnary
+    A nested dictionnary with a root level the three part of GO as keys and arrays (in node-link format) as values
+    {&#34;cellular_component&#34;: [
+      &#34;nodes&#34;: [], &#34;links&#34;: []
+      ],
+      &#34;molecular_function&#34;: [
+        &#34;nodes&#34;: [], &#34;links&#34;: []
+      ],
+      &#34;biological_process&#34;: [
+        &#34;nodes&#34;: [], &#34;links&#34;: []
+      ]}
+  &#34;&#34;&#34;
+  # Initialize an empty node-link dictionnary
+  geneDictionnary = {&#34;nodes&#34;: [], &#34;links&#34;: []}
+  # Iterate through iteration dictionnary
+  for iterator in iteration:
+    # Get current iteration number by splitting dictionnary key
+    currentIterationNumber = iterator.split(&#34;_&#34;)[1]
+    # Iterate through nodes template
+    for node in geneTemplate:
+      # Deep copy node
+      newNode = copy.deepcopy(node)
+      # Generate a correct ID making an iD like next example:
+      # currentIterationNumber#GOid
+      newNode[&#34;id&#34;] = currentIterationNumber + &#34;#&#34; + node[&#34;id&#34;]
+      # Add iteration
+      newNode[&#34;iteration&#34;] = currentIterationNumber
+      # Append it in dictionnary
+      geneDictionnary[&#34;nodes&#34;].append(newNode)
+  return geneDictionnary</code></pre>
+</details>
+</dd>
+<dt id="module.genesParsing.getSizeOfGOParts"><code class="name flex">
+<span>def <span class="ident">getSizeOfGOParts</span></span>(<span>sizeOfGOPart, jsonFile)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>For each part of GO calculate how many genes are mapped on each GOSlim term at each iterations.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>sizeOfGOPart</code></strong> :&ensp;<code>type</code></dt>
+<dd>Description of parameter <code>sizeOfGOPart</code>.</dd>
+<dt><strong><code>jsonFile</code></strong> :&ensp;<code>array</code> of <code>dictionnaries</code></dt>
+<dd>Array gathering all nodes and links of graph</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def getSizeOfGOParts(sizeOfGOPart, jsonFile):
+  &#34;&#34;&#34;For each part of GO calculate how many genes are mapped on each GOSlim term at each iterations.
+
+  Parameters
+  ----------
+  sizeOfGOPart : type
+      Description of parameter `sizeOfGOPart`.
+  jsonFile : array of dictionnaries
+        Array gathering all nodes and links of graph
+  &#34;&#34;&#34;
+  for node in jsonFile[&#34;nodes&#34;]:
+    try:
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +
+                         node[&#34;iteration&#34;]]
+    except:
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; + node[&#34;iteration&#34;]] = 0
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +node[&#34;iteration&#34;]] =sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +node[&#34;iteration&#34;]]+ len(node[&#34;mappedData&#34;])
+    else:
+      sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; + node[&#34;iteration&#34;]] =sizeOfGOPart[node[&#34;GOPart&#34;]][&#34;iteration&#34; + &#34;_&#34; +node[&#34;iteration&#34;]]+ len(node[&#34;mappedData&#34;])</code></pre>
+</details>
+</dd>
+<dt id="module.genesParsing.mapOnGeneNodes"><code class="name flex">
+<span>def <span class="ident">mapOnGeneNodes</span></span>(<span>corgiGenes, geneInformations, sizeOfIterations, genesJson)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Map nodes constructed using GOSlim informations and genes coming from each iterations of CoRGI. Those genes are enrichied using informations coming from TAIR database.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>corgiGenes</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>A dictionnary with iteration number as key and array of gene as value.
+{'iteration_1': [
+'ATG....',
+],
+'iteration_0': [
+'ATG....'
+],
+'iteration_2':
+['ATG....',
+],
+'iteration_3': [
+'ATG....'
+]}</dd>
+<dt><strong><code>geneInformationsJson</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>Dictionnary gathering all informations of every nodes of GOSlim.</dd>
+<dt><strong><code>sizeOfIterations</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>A dictionnary with iterations names as keys and number of genes in each iterations. Here is an example of dictionnary:
+{'iteration_1': 264,
+'iteration_0': 434,
+'iteration_2': 96,
+'iteration_3': 37}</dd>
+<dt><strong><code>genesJson</code></strong> :&ensp;<code>array</code> of <code>dictionnaries</code></dt>
+<dd>Array gathering all nodes and links of graph</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>geneInformationsJson</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>Dictionnary gathering all informations of every nodes of GOSlim.</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def mapOnGeneNodes(corgiGenes, geneInformations, sizeOfIterations, genesJson):
+  &#34;&#34;&#34;Map nodes constructed using GOSlim informations and genes coming from each iterations of CoRGI. Those genes are enrichied using informations coming from TAIR database.
+
+  Parameters
+  ----------
+  corgiGenes : dictionnary
+      A dictionnary with iteration number as key and array of gene as value.
+      {&#39;iteration_1&#39;: [
+        &#39;ATG....&#39;,
+      ],
+      &#39;iteration_0&#39;: [
+      &#39;ATG....&#39;
+      ],
+      &#39;iteration_2&#39;:
+      [&#39;ATG....&#39;,
+      ],
+      &#39;iteration_3&#39;: [
+      &#39;ATG....&#39;
+      ]}
+  geneInformationsJson : dictionnary
+      Dictionnary gathering all informations of every nodes of GOSlim.
+  sizeOfIterations : dictionnary
+      A dictionnary with iterations names as keys and number of genes in each iterations. Here is an example of dictionnary:
+      {&#39;iteration_1&#39;: 264,
+      &#39;iteration_0&#39;: 434,
+      &#39;iteration_2&#39;: 96,
+      &#39;iteration_3&#39;: 37}
+  genesJson : array of dictionnaries
+      Array gathering all nodes and links of graph
+
+  Returns
+  -------
+  geneInformationsJson : dictionnary
+      Dictionnary gathering all informations of every nodes of GOSlim.
+  &#34;&#34;&#34;
+  # Iterating tought experiments
+  for geneIterator in corgiGenes:
+    # Split iteration key to get iteration number
+    currentIterationNumber = geneIterator.split(&#34;_&#34;)[1]
+    # Iterating throught all ID of expermimentation for current iteration of CoRGI
+    for geneID in corgiGenes[geneIterator]:
+      for geneInformation in geneInformations[geneID]:
+        # Try to split GOslim_reference following &#39;|&#39;. In fact, if multiple GOslim_reference exist, they are separated by &#39;|&#39;
+        try:
+          splitedGeneInformation = geneInformation[&#39;GOslim_reference&#39;].split(
+              &#39;|&#39;)
+          splitedGeneInformation[1]
+        # If there is no multiple GOslim_reference search for right label and save this gene in mappedData
+        except:
+          for node in genesJson[&#34;nodes&#34;]:
+            if splitedGeneInformation[0] == node[&#39;lbl&#39;] and node[&#39;iteration&#39;] == currentIterationNumber:
+              # Append gene information in mappedData array of current node
+              appendUniqMappedData(node, geneInformation)
+        # If there is multiple GOslim_reference
+        else:
+          # Loop on every GOslim_reference, search for right GO slim node and save in it gene Informations
+          for splittedGeneLbl in splitedGeneInformation:
+            for node in genesJson[&#34;nodes&#34;]:
+              if splittedGeneLbl == node[&#39;lbl&#39;] and node[&#39;iteration&#39;] == currentIterationNumber:
+                # Append gene information in mappedData array of current node
+                appendUniqMappedData(node, geneInformation)
+  # If node does not have any gene mapped in it, delete it
+  genesJson = purgeEmptyNodes(genesJson)
+  return genesJson</code></pre>
+</details>
+</dd>
+<dt id="module.genesParsing.prepareGeneTemplate"><code class="name flex">
+<span>def <span class="ident">prepareGeneTemplate</span></span>(<span>geneInformationsJson)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Construct a nested dictionnary gathering templates of all nodes of last level of GOSlim and put it in right dictionnary following his category in Gene Ontology (cellular_component, molecular_function or biological_process)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>geneInformationsJson</code></strong> :&ensp;<code>dictionnary</code></dt>
+<dd>Dictionnary gathering all informations of every nodes of GOSlim</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>dictionnary</code></dt>
+<dd>A nested dictionnary with a root level the three part of GO as keys and arrays (in node-link format) as values
+{"cellular_component": [
+"nodes": [], "links": []
+],
+"molecular_function": [
+"nodes": [], "links": []
+],
+"biological_process": [
+"nodes": [], "links": []
+]}</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def prepareGeneTemplate(geneInformationsJson):
+  &#34;&#34;&#34;Construct a nested dictionnary gathering templates of all nodes of last level of GOSlim and put it in right dictionnary following his category in Gene Ontology (cellular_component, molecular_function or biological_process)
+
+  Parameters
+  ----------
+  geneInformationsJson : dictionnary
+      Dictionnary gathering all informations of every nodes of GOSlim
+
+  Returns
+  -------
+  dictionnary
+      A nested dictionnary with a root level the three part of GO as keys and arrays (in node-link format) as values
+      {&#34;cellular_component&#34;: [
+        &#34;nodes&#34;: [], &#34;links&#34;: []
+        ],
+        &#34;molecular_function&#34;: [
+          &#34;nodes&#34;: [], &#34;links&#34;: []
+        ],
+        &#34;biological_process&#34;: [
+          &#34;nodes&#34;: [], &#34;links&#34;: []
+        ]}
+
+  &#34;&#34;&#34;
+  # Initialize a dictionnary of array
+  constructedGenesTemplate = {&#34;cellular_component&#34;: [],
+                              &#34;molecular_function&#34;: [],
+                              &#34;biological_process&#34;: []}
+  # Iterate through all genes
+  for geneInformations in geneInformationsJson[&#34;nodes&#34;]:
+   # If there is more than this infos in basicPropertyValues loop on it until find to which GO part this node belongs
+    for i in range(0, len(geneInformations[&#34;meta&#34;][&#34;basicPropertyValues&#34;])):
+      # If part of GO implicated is stored in meta dictionnary of node
+      if geneInformations[&#34;meta&#34;][&#34;basicPropertyValues&#34;][i][&#34;pred&#34;] == &#39;http://www.geneontology.org/formats/oboInOwl#hasOBONamespace&#39;:
+        geneInformations[&#34;GOPart&#34;]=geneInformations[&#34;meta&#34;][&#34;basicPropertyValues&#34;][i][&#34;val&#34;]
+        # Put gene in right array using meta information
+        constructedGenesTemplate[geneInformations[&#34;meta&#34;]
+                                 [&#34;basicPropertyValues&#34;][i][&#34;val&#34;]].append(geneInformations)
+  return constructedGenesTemplate</code></pre>
+</details>
+</dd>
+<dt id="module.genesParsing.purgeEmptyNodes"><code class="name flex">
+<span>def <span class="ident">purgeEmptyNodes</span></span>(<span>genesJson)</span>
+</code></dt>
+<dd>
+<section class="desc"><p>Delete nodes not represented in CoRGI iterations (he does not gather informations in mappedData)</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>genesJson</code></strong> :&ensp;<code>array</code> of <code>dictionnaries</code></dt>
+<dd>Array gathering all nodes and links of graph</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>array</code> of <code>dictionnaries</code></dt>
+<dd>Array gathering all nodes and links of graph</dd>
+</dl></section>
+<details class="source">
+<summary>Source code</summary>
+<pre><code class="python">def purgeEmptyNodes(genesJson):
+  &#34;&#34;&#34;Delete nodes not represented in CoRGI iterations (he does not gather informations in mappedData)
+
+  Parameters
+  ----------
+  genesJson : array of dictionnaries
+      Array gathering all nodes and links of graph
+
+  Returns
+  -------
+  array of dictionnaries
+      Array gathering all nodes and links of graph
+
+  &#34;&#34;&#34;
+  # Iterate through all nodes
+  for node in genesJson[&#34;nodes&#34;]:
+    # If there is not mapped genes
+    if len(node[&#34;mappedData&#34;]) == 0:
+      # Remove node
+      genesJson[&#34;nodes&#34;].remove(node)
+  return genesJson</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="module" href="index.html">module</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="module.genesParsing.addRelativeValueForGOParts" href="#module.genesParsing.addRelativeValueForGOParts">addRelativeValueForGOParts</a></code></li>
+<li><code><a title="module.genesParsing.appendUniqMappedData" href="#module.genesParsing.appendUniqMappedData">appendUniqMappedData</a></code></li>
+<li><code><a title="module.genesParsing.createGeneNodes" href="#module.genesParsing.createGeneNodes">createGeneNodes</a></code></li>
+<li><code><a title="module.genesParsing.getSizeOfGOParts" href="#module.genesParsing.getSizeOfGOParts">getSizeOfGOParts</a></code></li>
+<li><code><a title="module.genesParsing.mapOnGeneNodes" href="#module.genesParsing.mapOnGeneNodes">mapOnGeneNodes</a></code></li>
+<li><code><a title="module.genesParsing.prepareGeneTemplate" href="#module.genesParsing.prepareGeneTemplate">prepareGeneTemplate</a></code></li>
+<li><code><a title="module.genesParsing.purgeEmptyNodes" href="#module.genesParsing.purgeEmptyNodes">purgeEmptyNodes</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.6.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
