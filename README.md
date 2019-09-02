@@ -7,6 +7,24 @@ CoRGI is a web application of bi-clustering implemented in JavaScript. This tool
 
 In order to be able to effectively interpret the results of CoRGI it is necessary to set up a visualization method to visualize the evolution of the metadata of the cluster of genes, but also to be able to access to the details of a given iteration. The IRHS bioinformatics team has set up metadatas to describe experiments. Functional annotation of genes using the GO has been implemented to describe genes. A set of alluvial diagrams is set up to monitor the evolution of gene metadata and experiments during iterations of the CoRGI algorithm. Force-directed graphs are built to be able to visualize the details of a given iteration. These two methods used together have made it possible to build an effective visualization to help the biologist interpret the results of CoRGI.
 
+## Installation manual
+
+To run those scripts simply provide datas and run a server to execute scripts. Easiest method is to run a python web server using following command:
+
+
+    cd repository
+    # Get python version
+    python -V
+    # If the version of Python returned is later than 3.X
+    python3 -m http.server
+    # If the version of Python returned is later than 2.X
+    python -m SimpleHTTPServer
+
+
+By default, it displays the list of files in the folder on a development server, port 8000. You can go to this server by entering the localhost:8000 URL in your web browser. You will see the contents of the folder listed - click the HTML file you want to run.
+
+Note: If port 8000 is busy, you can choose another port by specifying an alternative number after the command for example python -m http.server 7800 (Python 3.x) or python -m SimpleHTTPServer 7800 (Python 2.x). You can now access your content at localhost:7800.
+
 
 ## Visualizations produced
 
@@ -30,34 +48,17 @@ Force-directed graphs provide access to more detail by using the term GO and not
 
 ### Folder architectures
 
-Data folder. It is empty since the data has not yet been published. This is the folder where to store the data.
-The examples_of_visualizations folder stores some examples of visualizations produced using the repository scripts.
-The profiling folder stores a JSON file resulting from the profiling of the application by Google CHrome.
-protyping stock of python scripts used to prototype the various parsing and diagram construction steps.
-python_precomputation stores some python scripts to prepare the data needed to build diagrams. This constitutes:
-- The parsing of a CoRGI output.
-- Annotations of the genes present in the CoRGI dataset
-- Some functions allowing file conversions
+- Data folder. It is empty since the data has not yet been published. This is the folder where to store the data.
+- The examples_of_visualizations folder stores some examples of visualizations produced using the repository scripts.
+- The profiling folder stores a JSON file resulting from the profiling of the application by Google Chrome.
+- Protyping folder store python scripts used to prototype the various parsing and diagram construction steps. Thoses scripts are documented using pydoc rules. An HTML API has been generated and associated to this repository. 
+- Python_precomputation stores some python scripts to prepare the data needed to build diagrams. This constitutes:
+    - The parsing of a CoRGI output.
+    - Annotations of the genes present in the CoRGI dataset
+    - Some functions allowing file conversions
 
-The visualization folder stores all JavaScript files allowing the construction of visualizations. A libs folder will gather libraries of functions written during the course but also a version of the d3-sankey module rewritten to allow the construction of links of variable height.
-conf folder. Stores a configuration file to configure the script for building visualizations.
-The data folder will wait for data.  Finally, the sankey_experiments_and_genes folder stores the main function of the script allowing the construction of the visualizations.
+- The visualization folder stores all JavaScript files allowing the construction of visualizations. A libs folder will gather libraries of functions written during the course but also a version of the d3-sankey module rewritten to allow the construction of links of variable height.
 
-
-## Installation manual
-
-To run those scripts simply provide datas and run a server to execute scripts. Easiest method is to run a python web server using following command:
-
-
-    cd repository
-    # Get python version
-    python -V
-    # If the version of Python returned is later than 3.X
-    python3 -m http.server
-    # If the version of Python returned is later than 2.X
-    python -m SimpleHTTPServer
-
-
-By default, it displays the list of files in the folder on a development server, port 8000. You can go to this server by entering the localhost:8000 URL in your web browser. You will see the contents of the folder listed - click the HTML file you want to run.
-
-Note: If port 8000 is busy, you can choose another port by specifying an alternative number after the command for example python -m http.server 7800 (Python 3.x) or python -m SimpleHTTPServer 7800 (Python 2.x). You can now access your content at localhost:7800.
+- Conf folder. Stores a configuration file to configure the script for building visualizations.
+- The data folder will wait for data.  
+- Finally, the sankey_experiments_and_genes folder stores the main function of the script allowing the construction of the visualizations.
