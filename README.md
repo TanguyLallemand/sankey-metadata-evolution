@@ -42,3 +42,22 @@ python_precomputation stores some python scripts to prepare the data needed to b
 The visualization folder stores all JavaScript files allowing the construction of visualizations. A libs folder will gather libraries of functions written during the course but also a version of the d3-sankey module rewritten to allow the construction of links of variable height.
 conf folder. Stores a configuration file to configure the script for building visualizations.
 The data folder will wait for data.  Finally, the sankey_experiments_and_genes folder stores the main function of the script allowing the construction of the visualizations.
+
+
+## Installation manual
+
+To run those scripts simply provide datas and run a server to execute scripts. Easiest method is to run a python web server using following command:
+
+
+    cd repository
+    # Get python version
+    python -V
+    # If the version of Python returned is later than 3.X
+    python3 -m http.server
+    # If the version of Python returned is later than 2.X
+    python -m SimpleHTTPServer
+
+
+By default, it displays the list of files in the folder on a development server, port 8000. You can go to this server by entering the localhost:8000 URL in your web browser. You will see the contents of the folder listed - click the HTML file you want to run.
+
+Note: If port 8000 is busy, you can choose another port by specifying an alternative number after the command for example python -m http.server 7800 (Python 3.x) or python -m SimpleHTTPServer 7800 (Python 2.x). You can now access your content at localhost:7800.
