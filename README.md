@@ -51,7 +51,7 @@ Force-directed graphs provide access to more detail by using the term GO and not
 - Data folder. It is empty since the data has not yet been published. This is the folder where to store the data.
 - The examples_of_visualizations folder stores some examples of visualizations produced using the repository scripts.
 - The profiling folder stores a JSON file resulting from the profiling of the application by Google Chrome.
-- Protyping folder store python scripts used to prototype the various parsing and diagram construction steps. Thoses scripts are documented using pydoc rules. An HTML API has been generated and associated to this repository. 
+- Protyping folder store python scripts used to prototype the various parsing and diagram construction steps. Thoses scripts are documented using pydoc rules. An HTML API has been generated and associated to this repository.
 - Python_precomputation stores some python scripts to prepare the data needed to build diagrams. This constitutes:
     - The parsing of a CoRGI output.
     - Annotations of the genes present in the CoRGI dataset
@@ -62,3 +62,20 @@ Force-directed graphs provide access to more detail by using the term GO and not
 - Conf folder. Stores a configuration file to configure the script for building visualizations.
 - The data folder will wait for data.  
 - Finally, the sankey_experiments_and_genes folder stores the main function of the script allowing the construction of the visualizations.
+
+## Data format needed
+
+To construct Sankey diagramms and force directd graph, data provided needs to follows JSON-LD requirements:
+
+    {
+        "nodes": [
+        {"id": "Alice"},
+        {"id": "Bob"},
+        {"id": "Carol"}
+        ];
+
+        "links": [
+        {"source": 0, "target": 1}, // Alice → Bob
+        {"source": 1, "target": 2} // Bob → Carol
+        ];
+    }
