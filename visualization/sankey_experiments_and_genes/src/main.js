@@ -16,7 +16,7 @@
 //******************************************************************************
 
 // Load config file using D3V5 standard based on promise. Note that you don’t need to rethrow the error—the promise will reject automatically, and you can promise.catch if desired.
-d3.json("../conf/config_file_sankey.json").then(function(confJson) {
+d3.json("../../conf/config_file_sankey.json").then(function(confJson) {
   // Load file used for compute Fisher test
   d3.json(confJson["paths"]["fisherDataset"]).then(function(fisherDataset) {
     // Load CoRGI output file
