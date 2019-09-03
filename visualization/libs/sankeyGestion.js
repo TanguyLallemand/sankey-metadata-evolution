@@ -61,17 +61,17 @@ function variableWidthLink(d) {
   // Calculate source and target height
   const sy = linkHeights(d, d.source, d.source.sourceLinks);
   const ty = linkHeights(d, d.target, d.target.targetLinks);
-  // s.x1 is the right side of the source
-  // t.x0 is the left side of the target
-  const xm = (s.x1 + t.x0) / 2;
+  // s.x0 is the right side of the source
+  // t.x1 is the left side of the target
+  const xm = (s.x0 + t.x1) / 2;
   // Generate a d3 path and construct it using line and bezier curves
   const path = d3.path();
-  path.moveTo(s.x1, sy[0]);
+  path.moveTo(s.x0, sy[0]);
   // Generate a bezier curve between the two points
-  path.bezierCurveTo(xm, sy[0], xm, ty[0], t.x0, ty[0]);
-  path.lineTo(t.x0, ty[1]);
+  path.bezierCurveTo(xm, sy[0], xm, ty[0], t.x1, ty[0]);
+  path.lineTo(t.x1, ty[1]);
   // Generate a bezier curve between the two points
-  path.bezierCurveTo(xm, ty[1], xm, sy[1], s.x1, sy[1]);
+  path.bezierCurveTo(xm, ty[1], xm, sy[1], s.x0, sy[1]);
   path.closePath();
 
   return path.toString();
