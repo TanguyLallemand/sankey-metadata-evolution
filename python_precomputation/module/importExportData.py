@@ -81,9 +81,9 @@ def parseCorgiOutput(path):
     for line in algorithmOutput:
       for lineSplitted in line.split():
         if lineSplitted == "Itération":
-          splittedIterationString = iteration.split('_')
           i = line.split()[1]
-          iteration = splittedIterationString[0] + "_" + line.split()[1]
+          # iteration = lineSplitted.split('_')[0] + "_" + line.split()[1]
+          iteration = "iteration_" + line.split()[1]
           # Initialize a new array of object in both array, to store future IDs of experiments or genes
           experiments[iteration] = []
           genes[iteration] = []
@@ -91,12 +91,12 @@ def parseCorgiOutput(path):
         if re.match("^X", lineSplitted):
           # Delete X char, and replace '.' by a '#' to fit with orignals IDs
           lineSplitted = lineSplitted[1:].replace('.', '#')
-          if i != 0:
-            experiments[iteration].append(lineSplitted)
+          # if i != 0:
+          experiments[iteration].append(lineSplitted)
         # If current line is a ID of gene
         if re.match("^AT", lineSplitted):
-          if i != 0:
-            genes[iteration].append(lineSplitted)
+          # if i != 0:
+          genes[iteration].append(lineSplitted)
   # Return results in an array of array, allowing a more compact return, easy to parse
   return [experiments, genes]
 
