@@ -1,4 +1,4 @@
-# Construction of visualizations to represent metadats evolutions into genes cluster
+# Construction of visualizations to represent metadatas evolutions into genes cluster
 
 ## Abstract
 Over the past several years, there has been an increase in the size and diversity of the data studied. This observation is particularly marked in the field of transcriptomics, where the need to integrate and visualize large volumes of heterogeneous data arises.
