@@ -68,7 +68,7 @@ def main():
   # Load configuration and arguments
   #############################################################################
   # Load config file
-  config = loadConfig('./conf/construct_go_mapped_with_genes_for_each_CoRGI_iterations.ini')
+  config = loadConfig('../conf/construct_go_mapped_with_genes_for_each_CoRGI_iterations.ini')
   # Load arguments, if no argument are given when call this script, config informations are used
   args = getCompleteGOThroughTimeArguments(config)
 

@@ -51,7 +51,7 @@ def main():
   # Load configuration and arguments
   ##############################################################################
   # Load config file
-  config = loadConfig('./conf/construct_GO_rooted_with_a_slim_term.ini')
+  config = loadConfig('../conf/construct_GO_rooted_with_a_slim_term.ini')
   # Load arguments, if no argument are given when call this script, config informations are used
   args = getGOSlimRootedArguments(config)
   # Get number of available cores

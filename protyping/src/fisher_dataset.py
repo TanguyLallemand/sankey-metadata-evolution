@@ -52,7 +52,7 @@ def main():
   # Load configuration and arguments
   ##############################################################################
   # Load config file
-  config = loadConfig('./conf/configuration_fisher_dataset.ini')
+  config = loadConfig('../conf/configuration_fisher_dataset.ini')
   # Load arguments, if no argument are given when call this script, config informations are used
   args = getFisherDatasetArguments(config)
 

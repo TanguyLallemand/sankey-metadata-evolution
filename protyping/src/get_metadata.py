@@ -107,7 +107,7 @@ def main():
   # Load configuration and arguments
   #############################################################################
   # Load config file
-  config = loadConfig('./conf/configuration_metadata.ini')
+  config = loadConfig('../conf/configuration_metadata.ini')
   # Load arguments, if no argument are given when call this script, config informations are used
   args = getMetadataArguments(config)
 

@@ -28,7 +28,7 @@ def main():
   # Load configuration and arguments
   #############################################################################
   # Load config file
-  config = loadConfig('./conf/generate_list_of_genes_and_experimentations.ini')
+  config = loadConfig('../conf/generate_list_of_genes_and_experimentations.ini')
   # Load CoRGI iterations
   resultsParsingCorgiOutput = parseCorgiOutput(
       config["default_settings"]["corgiOutput"])

@@ -27,7 +27,7 @@ def main():
   # Load configuration and arguments
   #############################################################################
   # Load config file
-  config = loadConfig('./conf/generateGenesJson.ini')
+  config = loadConfig('../conf/generateGenesJson.ini')
   # Load Json file given in parameter
   catmaJsonFile = openJsonFile(config["default_settings"]["CatmaPath"])
   tairDatabase = parseTSV(config["default_settings"]["TAIRDatabase"])

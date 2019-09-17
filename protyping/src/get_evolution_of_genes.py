@@ -80,7 +80,7 @@ def main():
   # Load configuration and arguments
   #############################################################################
   # Load config file
-  config = loadConfig('./conf/configuration_evolution_genes.ini')
+  config = loadConfig('.../conf/configuration_evolution_genes.ini')
   # Load arguments, if no argument are given when call this script, config informations are used
   args = getGenesArguments(config)
 

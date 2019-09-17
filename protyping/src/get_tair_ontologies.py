@@ -68,8 +68,9 @@ def main():
   # Load configuration and arguments
   #############################################################################
   # Load config file
-  config = loadConfig('configuration_tair.ini')
+  config = loadConfig('../conf/configuration_tair.ini')
   # Load arguments, if no argument are given when call this script, config informations are used
+  print(config)
   args = getTAIRArguments(config)
 
 
