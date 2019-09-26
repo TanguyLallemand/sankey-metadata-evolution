@@ -30,6 +30,7 @@ d3.json("../../conf/config_file_sankey.json").then(function(confJson) {
           // Construct Sankey diagram in SVG
           generateSankeyDiagram(confJson, genesWholeJson, fisherDataset["TAIRDb"], corgiOutput.genes);
           // Debug
+          console.log(corgiOutput);
           console.log(genesWholeJson);
           console.log(fisherDataset);
         });

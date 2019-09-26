@@ -1,3 +1,15 @@
+/* ************************************************************************
+  CoRGI : The Co-Regulated Gene Investigator
+
+  Copyright: 2019 INRA http://www.inra.fr
+
+  License:
+    CeCILL: http://www.cecill.info/licences/Licence_CeCILL_V2-en.html
+    See the LICENCE file in the project's top-level directory for details.
+
+  Author:
+    * Tanguy LALLEMAND, BIDEFI team, IRHS
+************************************************************************ */
 function generateSankeyDiagram(confJson, graphJson, fisherDataset, corgi) {
   //****************************************************************************
   // Initialize some variables, get some config variables from config file

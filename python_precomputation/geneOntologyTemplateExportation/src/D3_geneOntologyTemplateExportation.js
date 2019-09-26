@@ -5,7 +5,7 @@ var sankey = d3.sankey()
   .iterations(16);
 
 // Load data from local Json file
-d3.json("../../data/output/goslim_plant.json").then(function(GOData) {
+d3.json("../../../data/goslim_plant.json").then(function(GOData) {
   // Set filter
   var filter_on = "PROPERTY";
   // Filter data
